@@ -8,25 +8,24 @@ header {
     text-align: right;
     background: #1abc9c;
     color: white;
-    height: 20px;
+    height: 30px;
     font-size: small;
 
     
 }
 
 .nav {
-    background-color: grey;
+   
     color: black;
     padding: 3px;
     margin: 1px;
-    border: 2px solid black;
+    display: l;
     text-decoration: none;
     margin: 5px;
 }
 
 .nav:hover {
-    background-color: black;
-    color: white;
+    color: green;
 }
 
 img {
