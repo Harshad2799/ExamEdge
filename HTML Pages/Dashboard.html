@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="CSS Files/Main.css">
+    <link rel="stylesheet" href="/CSS Files/Main.css">
+    <link rel="stylesheet" href="/CSS Files/JS Files/sidebar.js">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
@@ -14,27 +15,33 @@
 </head>
 
 <body>
+    
+
     <div>
-        <nav class="navbar navbar-expand-lg bg-body-secondary">
+        <nav class="navbar navbar-expand-lg bg-body-secondary" id="mainnav">
             <div class="container-fluid">
-                <img src="https://th.bing.com/th/id/OIP.37KrZu9u-IdJuknfPVXpbQHaHa?pid=ImgDet&rs=1" />
-
-                <div class=" navbar-collapse">
-                    <div class="navbar-nav">
-                        <a class="nav" href="#">Home</a>
-                        <a class="nav" href="#">Reports</a>
-                        <a class="nav" href="#">Questions</a>
-                    </div>
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Clients</a>
+                    <a href="#">Contact</a>
                 </div>
-                <button class="btn1"><img
-                        src="https://www.bing.com/th/id/OIP.HVEZ3duRvT4qtHWwelPjfQHaHa?w=163&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
-                </button>
-
+                <div id="main">
+                    <button class="openbtn" onclick="openNav()">Open Sidebar</button> 
+                </div>
+                <!-- <div id="main">
+                    <button class="openbtn" onclick="openNav()"><img src="/IMG/Logo4.jpg"></button>
+                </div> -->
             </div>
-
-    </div>
-
-    </nav>
+            <div class="rightlink">
+                <a href="#">Login</a>
+                <a href="#">Admin Login</a>
+                <a href="#">Register</a>
+            </div>
+            <button class="btn1">Logout
+            </button >
+        </nav>
     </div>
     <div id="maincard">
         <div class="card">
@@ -57,12 +64,12 @@
     </div>
     <footer class="footer">
         <div class="left">
-        <h1>hello world</h1>
-     
-    </div>
-    <div class="right">
-        <h1>hello world</h1>
-    </div>
+            <h1>hello world</h1>
+
+        </div>
+        <div class="right">
+            <h1>hello world</h1>
+        </div>
     </footer>
 </body>
 
