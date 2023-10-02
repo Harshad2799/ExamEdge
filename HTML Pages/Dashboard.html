@@ -4,19 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="/CSS Files/Main.css">
-    <link rel="stylesheet" href="/CSS Files/JS Files/sidebar.js">
+    <title>AdminPage</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/CSS Files/AdminDashboard.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <script src="/JS Files/sidebar.js"></script>
 </head>
 
 <body>
-    
-
     <div>
         <nav class="navbar navbar-expand-lg bg-body-secondary" id="mainnav">
             <div class="container-fluid">
@@ -25,26 +31,23 @@
                     <a href="#">About</a>
                     <a href="#">Services</a>
                     <a href="#">Clients</a>
-                    <a href="#">Contact</a>
+                    <a href="Contact.html   ">Contact</a>
                 </div>
                 <div id="main">
-                    <button class="openbtn" onclick="openNav()">Open Sidebar</button> 
-                </div>
-                <!-- <div id="main">
                     <button class="openbtn" onclick="openNav()"><img src="/IMG/Logo4.jpg"></button>
-                </div> -->
+                </div>
             </div>
-            <div class="rightlink">
+            <!-- <div class="rightlink">
                 <a href="#">Login</a>
                 <a href="#">Admin Login</a>
                 <a href="#">Register</a>
-            </div>
-            <button class="btn1">Logout
-            </button >
+            </div> -->
+            <h3 class="userName">UserName</h3>
+            <button class="btn1">Logout</button>
         </nav>
     </div>
     <div id="maincard">
-        <div class="card">
+        <div class="card" style="height: 44vh;">
             <div class="container">
                 <h4><b>Reports</b></h4>
                 <a class="cardlink" href="#">View Reports</a>
@@ -52,8 +55,7 @@
                 <a class="cardlink" href="#">Search Student</a>
             </div>
         </div>
-
-        <div class="card">
+        <div class="card" style="height: 44vh;">
             <div class="container">
                 <h4><b>Actions</b></h4>
                 <a class="cardlink" href="#">Add Questions</a>
@@ -61,15 +63,8 @@
             </div>
         </div>
     </div>
-    </div>
     <footer class="footer">
-        <div class="left">
-            <h1>hello world</h1>
-
-        </div>
-        <div class="right">
-            <h1>hello world</h1>
-        </div>
+        <h2 class="copyright">ExamEdge Exam Portal &copy;</h2>
     </footer>
 </body>
 
