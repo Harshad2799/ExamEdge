@@ -1,0 +1,30 @@
+.loginlink{
+    float: right;
+    background-color: #00bfe0 100%;
+    background-image: linear-gradient(to right, #00bfe0 0, #4780d8 50%, #00bfe0 100%);;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    width: 80px;
+    height: 32px;
+    border-radius: 7px;
+    
+}
+.registerlink{
+    color: var(--ixb-orange) !important;
+    border: solid 1px var(--ixb-orange) !important;
+    text-decoration: none;
+    transition: 0.5s;
+    float: right;
+    text-align: center;
+    margin-right: 20px;
+    width: 80px;
+    height: 32px;
+    border-radius: 7px;
+    background-color: white;
+    border-color:#f78b29 ;
+}
+.registerlink:hover {
+    background-color: #f78b29;
+    color: white;
+}
