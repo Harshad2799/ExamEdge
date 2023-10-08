@@ -1,7 +1,12 @@
-<<<<<<< HEAD
+
+
+    body {
+            background-image: linear-gradient(to right, #00bfe0 0, #4780d8 50%, #00bfe0 100%);
+        }
+
 .card {
     margin: auto;
-    
+    background-color: whitesmoke;
     height: 450px;
     width: 350px;
     margin-top: 100px;
@@ -14,7 +19,7 @@
 .container {
 
     text-align: left;
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
     font-family: 'Poppins', sans-serif;
     
 }
@@ -25,11 +30,6 @@
 h1 {
     text-align: center;
 }
-
-
-
-
-
 
  button {
      padding: 7px 20px;
@@ -71,7 +71,7 @@ h1 {
      margin-top: 10px;
      margin-left: 30px;
      display: inline-block;
-     border: 1px solid #ccc;
+     border: 1px solid whitesmoke;
      border-radius: 4px;
      box-sizing: border-box;
 
@@ -81,5 +81,4 @@ h1 {
      margin-left: 63px;
      margin-top: -16px;
  }
-=======
->>>>>>> 35cbfc2c6713c35947907dbe44cfb684a38de9ee
+

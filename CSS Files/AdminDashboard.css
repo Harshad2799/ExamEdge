@@ -15,9 +15,9 @@ header {
 
 .nav {
     color: black;
+    background-color: white;
     padding: 3px;
     margin: 1px;
-    display: l;
     text-decoration: none;
     margin: 5px;
 }
@@ -84,7 +84,8 @@ img {
 
 /* Height Adjustment of navbar */
 #mainnav{
-    height: 7vh;
+    height: 10vh;
+    background-color: whitesmoke;
 }
 
 
