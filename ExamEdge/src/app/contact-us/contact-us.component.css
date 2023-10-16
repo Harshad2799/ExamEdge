@@ -1,12 +1,23 @@
-.contactCard{
-    background-color: whitesmoke;
-    float:right;
-    height: 60vh;
+.card{
+    /* background-color: aqua;
+    margin: 20px;
+    width: 400px;
+    margin-left: 30px; */
+    background-color: aqua;
+    margin: 20px;
+    width: 81%;
+    margin-left: 82px;
+    height: 70vh
 }
+
 .contactCard{
 
     text-align: left;
     background-color: whitesmoke;
+    width: 356px;
+    margin-top: 40px;
+    margin-left: 540px;
+    height: 57vh
 }
 label {
     text-align: left;
@@ -17,9 +28,9 @@ label {
 }
 input {
 
-    width: 84%;
+    width: 75%;
     padding: 7px 20px;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-left: 30px;
     display: inline-block;
     border: 1px solid #ccc;
@@ -44,4 +55,8 @@ h1 {
 }
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.something{
+    height: 125px;
+    text-align: left;
 }

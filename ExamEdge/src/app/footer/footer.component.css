@@ -1,0 +1,10 @@
+.footer{
+    height: 8vh;
+    background-color: black;
+    color: white;
+}
+
+.copyright{
+    font-size: 14px;
+    padding-top: 37px;
+}
