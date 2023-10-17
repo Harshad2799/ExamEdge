@@ -1,11 +1,24 @@
-body{
+body {
     margin: 0;
     padding: 0;
     justify-content: center;
     align-items: center;
 }
 
-.details{
+.reportCard {
+    padding: 20px;
+}
+
+.chartcard {
+    padding: 20px;
+}
+
+.leaderboardchart {
+    padding: 20px;
+    
+}
+
+.details {
     font-size: 26px;
     text-align: revert;
     margin-left: 50px;
@@ -13,32 +26,42 @@ body{
     color: green;
 }
 
-.picture{
+.picture {
     margin: auto;
 }
 
-.userImage{
+.userImage {
     width: auto;
     margin-top: -22px;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     margin: 0 auto 20px;
-            
+
 }
-.card{
+
+.card {
     height: 72vh;
     width: 55%;
-    margin-left: 245px
+    margin-left: 245px;
+    padding: 10px
 }
 
 @media screen and (max-height: 450px) {
-    .container-fluid {padding-top: 10px;}
-    .sidebar {padding-top: 10px;}
-    .sidebar a {font-size: 10px;}
-  }
+    .container-fluid {
+        padding-top: 10px;
+    }
 
-  .label-box {
+    .sidebar {
+        padding-top: 10px;
+    }
+
+    .sidebar a {
+        font-size: 10px;
+    }
+}
+
+.label-box {
     display: flex;
     align-items: center;
     margin: 14px;
@@ -61,14 +84,13 @@ body{
     width: 355px;
 }
 
-#card{
+#card {
     width: 55%;
     height: 53vh
-    
 }
 
 
-.chart{
+.chart {
     width: 600px;
     height: 300px;
     display: block;
@@ -76,7 +98,7 @@ body{
     margin-left: 90px
 }
 
-.number{
+.number {
     color: #fff;
     margin: 0;
     padding: 0;
@@ -86,7 +108,7 @@ body{
     float: left;
 }
 
-.number li{
+.number li {
     list-style: none;
     height: 150px;
     position: relative;
@@ -94,7 +116,7 @@ body{
 
 }
 
-.number span{
+.number span {
     font-size: 12px;
     font-weight: 600;
     position: absolute;
@@ -103,7 +125,7 @@ body{
     color: black;
 }
 
-.bars{
+.bars {
     color: blue;
     font-size: 12px;
     font-weight: 600;
@@ -115,9 +137,10 @@ body{
     height: 300px;
     box-shadow: 0 0 10px 0 #555;
     border-radius: 5px;
+    text-align: center;
 }
 
-.bars li{
+.bars li {
     display: table-cell;
     width: 100px;
     height: 300px;
@@ -125,15 +148,17 @@ body{
 
 }
 
-.bars span{
+.bars span {
     width: 100%;
     position: absolute;
     bottom: -30px;
     text-align: center;
+    font-size: 12px;
+  font-weight: 600;
 
 }
 
-.bars .bar{
+.bars .bar {
     display: block;
     background-color: #17c0eb;
     width: 50px;
@@ -141,23 +166,71 @@ body{
     bottom: 0;
     margin-left: 25px;
     text-align: center;
-    box-shadow: 0 0 10px rgba(23,192,235,0.5);
-    transition: 0.5s;
+    box-shadow: 0 0 10px rgba(23, 192, 235, 0.5);
+    transition: 0.7s;
+    display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center;
 
 
 }
 
-.bars .bar:hover{
+.bars .bar:hover {
     background-color: #55efc4;
     box-shadow: 0 0 10px 0 rgba(85, 239, 169, 0.5);
     cursor: pointer;
 }
 
-.bars .bar::before{
+.bars .bar::before {
     color: #fff;
-    content: "attr(data-percentage) '%'";
+    content: attr(data-percentage);
     position: relative;
     bottom: 20px;
 
 }
 
+.percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 4px; 
+  }
+
+ 
+  
+  
+.row {
+    position: relative;
+    display: block;
+    width: 97%;
+    height: 40px;
+    border-bottom: 1px solid #AFAFAF;
+    margin-left: 14px;
+}
+
+.name {
+    position: relative;
+    display: inline-block;
+    width: 75%;
+    line-height: 45px;
+}
+
+.score {
+    position: relative;
+    display: inline-block;
+    width: 25%;
+}
+
+.leaderboard {
+    margin-top: 12px;
+    margin-left: 40%;
+    color: green;
+    
+}
