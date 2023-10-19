@@ -10,6 +10,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { UserReportComponent } from './user-report/user-report.component';
 import { InstructionPsgeComponent } from './instruction-psge/instruction-psge.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { SubjectsComponent } from './subjects/subjects.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     UserLoginComponent,
     UserReportComponent,
     InstructionPsgeComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    SubjectsComponent
   ],
   imports: [
     BrowserModule,
