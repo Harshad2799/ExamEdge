@@ -17,4 +17,9 @@ export class UserReportComponent {
     { name: 'JS', percentage: 82 },
   ];
 
+  // StudentScores = [
+  //   {}
+  //   {}
+  //   {}
+  // ]
 }

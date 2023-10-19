@@ -1,23 +1,25 @@
 <div class="reportCard">
-    <div class="card">
-        <h1 class="details">User Details</h1>
-        <div class="picture">
-            <img src="https://img.freepik.com/premium-vector/icon-mans-face-with-light-skin_238404-886.jpg" class="userImage">
-        </div>
-        <div class="label-box">
-            <div class="label">Name</div>
-            <div class="name-box">Harshad Popat Jawale</div><span class="material-symbols-outlined">edit</span>
-        </div>
-        <div class="label-box">
-            <div class="label">Contact </div>
-            <div class="name-box">9022637685</div><span class="material-symbols-outlined">edit</span>
-        </div>
-        <div class="label-box">
-            <div class="label">Email Id</div>
-            <div class="name-box">abc@gmail.com</div><span class="material-symbols-outlined">edit</span>
-        </div>
+  <div class="card shadow">
+    <h1 class="details">User Details</h1>
+    <div class="picture">
+      <img src="https://img.freepik.com/premium-vector/icon-mans-face-with-light-skin_238404-886.jpg" class="userImage">
     </div>
-</div><div class="card" id="card">
+    <div class="label-box">
+      <div class="label">Name</div>
+      <div class="name-box">Harshad Popat Jawale</div><span class="material-symbols-outlined">edit</span>
+    </div>
+    <div class="label-box">
+      <div class="label">Contact </div>
+      <div class="name-box">9022637685</div><span class="material-symbols-outlined">edit</span>
+    </div>
+    <div class="label-box">
+      <div class="label">Email Id</div>
+      <div class="name-box">abc@gmail.com</div><span class="material-symbols-outlined">edit</span>
+    </div>
+  </div>
+</div>
+<div class="chartcard">
+  <div class="card shadow" id="card">
     <div class="chart">
       <ul class="number">
         <li><span>100%</span></li>
@@ -26,11 +28,44 @@
       </ul>
       <ul class="bars">
         <li *ngFor="let item of skillsData">
-          <div class="bar" [attr.data-percentage]="item.percentage">
+          <div class="bar loading" [style.height.%]="item.percentage">
+            <span class="percentage">{{ item.percentage }}%</span>
             <span>{{ item.name }}</span>
           </div>
         </li>
       </ul>
     </div>
   </div>
-  
+</div>
+
+
+<div class="leaderboardchart">
+<div class="card shadow">
+<h2 class="details">LeaderBoard</h2>
+  <div class="row">
+    <div class="name">Names</div>
+    <div class="score">Scores</div>
+  </div>
+
+  <div class="row" >
+    <div class="name">Player2</div>
+    <div class="score">580</div>
+  </div>
+
+  <div class="row">
+    <div class="name">Player3</div>
+    <div class="score">310</div>
+  </div>
+
+  <div class="row">
+    <div class="name">Player4</div>
+    <div class="score">640</div>
+  </div>
+
+  <div class="row">
+    <div class="name">Player5</div>
+    <div class="score">495</div>
+  </div>
+
+</div>
+</div>
