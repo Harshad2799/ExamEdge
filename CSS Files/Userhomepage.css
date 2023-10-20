@@ -1,5 +1,20 @@
-.card{
-    width: 100px;
-    height: 30px;
-    
+
+img{
+    height: 54vh;
+    float: right;
+    margin-top: 28px;
+    margin-right: 27px;
+    width: 53%;
+}
+
+h1{
+    position: absolute;
+    translate: 50px 103px;
+    color: bisque;
+}
+
+p{
+    position: absolute;
+    translate: 34px 191px;
+    color: white;
 }

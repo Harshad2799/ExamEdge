@@ -1,10 +1,32 @@
-.footer{
+/* Ensure the body and HTML take up 100% of the viewport height */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Create a flex container to hold the main content and footer */
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    max-height: fit-content;
+  }
+  
+  /* Style the main content area */
+  .content {
+    flex: 1; /* Allow it to grow and fill remaining space */
+     /* Add padding as needed */
+  }
+  
+  /* Style the footer */
+  .footer {
     height: 8vh;
     background-color: black;
     color: white;
-}
-
-.copyright{
+  }
+  
+  .copyright {
     font-size: 14px;
     padding-top: 37px;
-}
+  }
