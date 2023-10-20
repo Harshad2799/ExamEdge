@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.examcard {
+    /* height: 82vh; */
+    /* width: 208px;
+    margin: auto; */
+}
+
+
+.heading1 {
+    font-size: 20px;
+    color: #5eac1a;
+    margin: 10px
+}
+
+.heading2 {
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+}
+
+.column {
+    width: calc(50% - 20px); /* 50% width for each column with some spacing */
+    margin-bottom: 20px; /* Space between rows */
+    box-sizing: border-box;
+    margin-top: 23px;
+    padding:20px;
+    display: flex;
+    width: 1020px;
+    margin-left: 180px
+}
+.card-row:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Style the counter cards */
+.card-row {
+    padding: 16px;
+    background-color: whitesmoke;
+    height: 29vh;
+    width: 354px;
+    margin-left: 45px
+}
+
+.row{
+    margin-left: 70px;
+}
+
+.subname{
+    float: left;
+    color: #5eac1a;
+
+}
+
+.sublogo{
+    height: 79px;
+    width: 115px;
+    margin-top: -24px;
+}
+
+.sublogo1{
+    margin-left: 24px
+}
+
+ul, li {
+    margin: 0;
+    padding: -1px;
+    list-style-type: circle;
+    text-decoration: none;
+}
+
+li {
+    margin-bottom: 10px;
+    white-space: nowrap;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.examlinks{
+    text-decoration: none;
+    color: black;
+}
+
+.examlinks:hover{
+    text-decoration: underline;
+    color: #5eac1a;
+}
+

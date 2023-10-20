@@ -5,13 +5,17 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { UserReportComponent } from './user-report/user-report.component';
 import { InstructionPsgeComponent } from './instruction-psge/instruction-psge.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { SubjectsComponent } from './subjects/subjects.component';
 
 const routes: Routes = [
   {path:"userregister", component:UserRegisterComponent},
   {path:"userlogin", component:UserLoginComponent},
   {path:"userreport",component:UserReportComponent},
   {path: "instruction", component:InstructionPsgeComponent},
-  {path: "contactUs", component:ContactUsComponent}
+  {path: "contactUs", component:ContactUsComponent},
+  {path: "", component:HomepageComponent},
+  {path: "subject", component:SubjectsComponent}
   // {path: "contactus", component: conta}
 ];
 

@@ -11,6 +11,7 @@ import { UserReportComponent } from './user-report/user-report.component';
 import { InstructionPsgeComponent } from './instruction-psge/instruction-psge.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SubjectsComponent } from './subjects/subjects.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SubjectsComponent } from './subjects/subjects.component';
     UserReportComponent,
     InstructionPsgeComponent,
     ContactUsComponent,
-    SubjectsComponent
+    SubjectsComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
