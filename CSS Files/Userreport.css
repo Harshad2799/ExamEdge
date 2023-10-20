@@ -7,9 +7,17 @@
     width: 330px;   
 margin-left: 45px;
 }
-.scorelabel{
-    padding: 10px;
+
+label{
+    /* margin: 2px; */
+   
+            
+            padding: 10px;
+   
 }
-.h1{
+h1{
     text-align: center;
+}
+body{
+    font-family: Arial, sans-serif;
 }

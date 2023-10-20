@@ -12,6 +12,7 @@ import { InstructionPsgeComponent } from './instruction-psge/instruction-psge.co
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SubjectsComponent } from './subjects/subjects.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     InstructionPsgeComponent,
     ContactUsComponent,
     SubjectsComponent,
-    HomepageComponent
+    HomepageComponent,
+    ForgetpasswordComponent
   ],
   imports: [
     BrowserModule,
