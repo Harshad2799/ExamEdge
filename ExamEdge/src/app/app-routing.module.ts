@@ -7,6 +7,7 @@ import { InstructionPsgeComponent } from './instruction-psge/instruction-psge.co
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { SubjectsComponent } from './subjects/subjects.component';
+import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 
 const routes: Routes = [
   {path:"userregister", component:UserRegisterComponent},
@@ -15,7 +16,9 @@ const routes: Routes = [
   {path: "instruction", component:InstructionPsgeComponent},
   {path: "contactUs", component:ContactUsComponent},
   {path: "", component:HomepageComponent},
-  {path: "subject", component:SubjectsComponent}
+  {path: "subject", component:SubjectsComponent},
+  {path:"forget", component:ForgetpasswordComponent}
+
   // {path: "contactus", component: conta}
 ];
 

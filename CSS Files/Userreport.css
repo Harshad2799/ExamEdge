@@ -1,0 +1,23 @@
+.card{
+    height: 250px;
+    width: 330px
+}
+.container{
+    height: 250px;
+    width: 330px;   
+margin-left: 45px;
+}
+
+label{
+    /* margin: 2px; */
+   
+            
+            padding: 10px;
+   
+}
+h1{
+    text-align: center;
+}
+body{
+    font-family: Arial, sans-serif;
+}
