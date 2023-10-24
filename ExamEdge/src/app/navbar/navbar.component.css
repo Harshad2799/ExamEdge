@@ -91,6 +91,7 @@
   width: 80px;
   height: 32px;
   border-radius: 7px;
+  transition: 0.5s;
   
 }
 .registerlink{
@@ -110,5 +111,9 @@
 }
 .registerlink:hover {
   background-color: #f78b29;
+  color: white;
+}
+
+.loginlink:hover{
   color: white;
 }

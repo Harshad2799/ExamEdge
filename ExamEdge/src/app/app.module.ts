@@ -13,6 +13,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SubjectsComponent } from './subjects/subjects.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
+import { AddQuestionComponent } from './add-question/add-question.component';
+import { DeleteQuestionComponent } from './delete-question/delete-question.component';
+import { AdminreportComponent } from './admin-report/adminreport.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.compone
     ContactUsComponent,
     SubjectsComponent,
     HomepageComponent,
-    ForgetpasswordComponent
+    ForgetpasswordComponent,
+    AddQuestionComponent,
+    DeleteQuestionComponent,
+    AdminreportComponent
   ],
   imports: [
     BrowserModule,
