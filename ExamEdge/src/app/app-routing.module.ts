@@ -8,6 +8,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { SubjectsComponent } from './subjects/subjects.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
+import { AddQuestionComponent } from './add-question/add-question.component';
+import { DeleteQuestionComponent } from './delete-question/delete-question.component';
+import { AdminreportComponent } from './admin-report/adminreport.component';
 
 const routes: Routes = [
   {path:"userregister", component:UserRegisterComponent},
@@ -17,7 +20,10 @@ const routes: Routes = [
   {path: "contactUs", component:ContactUsComponent},
   {path: "", component:HomepageComponent},
   {path: "subject", component:SubjectsComponent},
-  {path:"forget", component:ForgetpasswordComponent}
+  {path:"forget", component:ForgetpasswordComponent},
+  {path: "addquestion", component:AddQuestionComponent},
+  {path: "deletequestion", component: DeleteQuestionComponent},
+  {path: "adminreport", component: AdminreportComponent}
 
   // {path: "contactus", component: conta}
 ];
