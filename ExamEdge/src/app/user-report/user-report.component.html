@@ -6,18 +6,19 @@
     </div>
     <div class="label-box">
       <div class="label">Name</div>
-      <div class="name-box">Harshad Popat Jawale</div><span class="material-symbols-outlined">edit</span>
+      <div class="name-box">Harshad Popat Jawale</div><span class="material-symbols-outlined"><a href="">edit</a></span>
     </div>
     <div class="label-box">
       <div class="label">Contact </div>
-      <div class="name-box">9022637685</div><span class="material-symbols-outlined">edit</span>
+      <div class="name-box">9022637685</div><span class="material-symbols-outlined"><a href="">edit</a></span>
     </div>
     <div class="label-box">
       <div class="label">Email Id</div>
-      <div class="name-box">abc@gmail.com</div><span class="material-symbols-outlined">edit</span>
+      <div class="name-box">abc@gmail.com</div><span class="material-symbols-outlined"><a href="">edit</a></span>
     </div>
   </div>
 </div>
+
 <div class="chartcard">
   <div class="card shadow" id="card">
     <div class="chart">
@@ -40,32 +41,16 @@
 
 
 <div class="leaderboardchart">
-<div class="card shadow">
-<h2 class="details">LeaderBoard</h2>
-  <div class="row">
-    <div class="name">Names</div>
-    <div class="score">Scores</div>
-  </div>
+  <div class="card shadow">
+    <h2 class="details">LeaderBoard</h2>
+    <div class="row">
+      <div class="name">Names</div>
+      <div class="score">Scores</div>
+    </div>
 
-  <div class="row" >
-    <div class="name">Player2</div>
-    <div class="score">580</div>
+    <div class="row" *ngFor="let player of sortedLeaderBoard">
+      <div class="name">{{ player.name }}</div>
+      <div class="score">{{ player.marks }}</div>
+    </div>
   </div>
-
-  <div class="row">
-    <div class="name">Player3</div>
-    <div class="score">310</div>
-  </div>
-
-  <div class="row">
-    <div class="name">Player4</div>
-    <div class="score">640</div>
-  </div>
-
-  <div class="row">
-    <div class="name">Player5</div>
-    <div class="score">495</div>
-  </div>
-
-</div>
 </div>
