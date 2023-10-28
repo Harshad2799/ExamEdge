@@ -23,14 +23,12 @@
 }
 
 .column {
-    width: calc(50% - 20px); /* 50% width for each column with some spacing */
-    margin-bottom: 20px; /* Space between rows */
-    box-sizing: border-box;
-    margin-top: 23px;
-    padding:20px;
-    display: flex;
-    width: 1020px;
-    margin-left: 180px
+   /* Update the width and remove the margin properties */
+   width: calc(21.33% - 41px); /* 3 columns in a row with a 4px gap between them */
+   box-sizing: border-box;
+   display: inline-block; /* Use inline-block to align the columns in a row */
+   margin-right: 30px; /* Add right margin for the gap */
+   margin-left: 123px
 }
 .card-row:hover{
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -38,11 +36,10 @@
 
 /* Style the counter cards */
 .card-row {
-    padding: 16px;
-    background-color: whitesmoke;
-    height: 29vh;
-    width: 354px;
-    margin-left: 45px
+   /* Remove height and width properties and add margin-bottom */
+   padding: 16px;
+   background-color: whitesmoke;
+   margin-bottom: 45px; /* Add bottom margin for the gap */
 }
 
 .row{
@@ -50,26 +47,29 @@
 }
 
 .subname{
-    float: left;
+    float: right;
     color: #5eac1a;
 
 }
 
-.sublogo{
-    height: 79px;
-    width: 115px;
-    margin-top: -24px;
+ .sublogo{
+    height: 56px;
+    /* width: 115px;
+    margin-top: -24px; */
 }
 
 .sublogo1{
     margin-left: 24px
-}
+} 
+
+
 
 ul, li {
-    margin: 0;
+    margin: -11px;
     padding: -1px;
     list-style-type: circle;
     text-decoration: none;
+    margin-top: 22px;
 }
 
 li {
@@ -89,3 +89,10 @@ li {
     color: #5eac1a;
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}

@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-question.component.css']
 })
 export class AddQuestionComponent {
-
+  question!: String
+  option1!: string
+  option2!: string
+  option3!: string
+  option4!: string
+  answer!: string
 }

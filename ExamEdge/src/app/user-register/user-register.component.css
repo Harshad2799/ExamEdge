@@ -5,9 +5,9 @@ body {
 .card {
     margin: auto;
     background-color: whitesmoke;
-    height: 600px;
-    width: 400px;
-    margin-top: 0px;
+    height: 640px;
+    width: 504px;
+    margin-top: 0px
 }
 
 .container {
@@ -17,7 +17,7 @@ body {
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
 }
 
 h1 {
@@ -71,4 +71,9 @@ input {
 .message {
     margin-left: 63px;
     margin-top: -16px;
+}
+
+.validate{
+    margin-left: 35px;
+    color: red;
 }

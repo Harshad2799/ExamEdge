@@ -1,103 +1,29 @@
-<h2 class="heading1">
-    Welcome to ExamEdge.com!
-</h2>
+<h2 class="heading1">Welcome to ExamEdge.com!</h2>
 
 <h4 class="heading1">Aptitude questions and answers for your placement interviews and competitive exams!</h4>
+
 <div class="row-row1">
-    <div class="mastercard">
-        <div class="column">
-            <div class="card-row">
-                <h3 class="subname">Java</h3>
-                <img src="assets/IMG/Java_Logo.png" class="sublogo">
-                <ul>
-                    <a href="#" class="examlinks">
-                        <li>Basic</li>
-                    </a>
-                    <a href="#" class="examlinks">
-                        <li>Intermediate</li>
-                    </a>
-                    <a href="" class="examlinks">
-                        <li>Advance</li>
-                    </a>
-                </ul>
-            </div>
-            <div class="card-row">
-                <h3 class="subname">Python</h3>
-                <img src="assets/IMG/Pyhon_logo.png" class="sublogo1" style="height: 49px;">
-                <ul>
-                    <a href="#" class="examlinks">
-                        <li>Basic</li>
-                    </a>
-                    <a href="#" class="examlinks">
-                        <li>Intermediate</li>
-                    </a>
-                    <a href="" class="examlinks">
-                        <li>Advance</li>
-                    </a>
-                </ul>
-            </div>
-            <div class="card-row">
-                <h3 class="subname">C</h3>
-                <img src="assets/IMG/C_Logo.png" class="sublogo1" style="height: 49px;">
-                <ul>
-                    <a href="#" class="examlinks">
-                        <li>Basic</li>
-                    </a>
-                    <a href="#" class="examlinks">
-                        <li>Intermediate</li>
-                    </a>
-                    <a href="" class="examlinks">
-                        <li>Advance</li>
-                    </a>
-                </ul>
-            </div>
-        </div>
+  <div class="mastercard">
+    <div class="column" *ngFor="let subject of subjects">
+      <div class="card-row">
+        <h3 class="subname">{{ subject.name }}</h3>
+        <img [src]="subject.logo" class="sublogo">
+        <ul>
+          <ng-container>
+            <a href="#" class="examlinks">
+              <li>Basic</li>
+            </a>
+            <a href="#" class="examlinks">
+                <li>Intermidiate</li>
+              </a>
+              <a href="#" class="examlinks">
+                <li>Advance</li>
+              </a>
+          </ng-container>
+        </ul>
+      
+            
+      </div>
     </div>
-    <div class="column">
-        <div class="card-row">
-            <h3 class="subname">HTML5</h3>
-            <img src="assets/IMG/HTML5_logo.png" class="sublogo1" style="height: 49px;">
-            <ul>
-                <a href="#" class="examlinks">
-                    <li>Basic</li>
-                </a>
-                <a href="#" class="examlinks">
-                    <li>Intermediate</li>
-                </a>
-                <a href="" class="examlinks">
-                    <li>Advance</li>
-                </a>
-            </ul>
-        </div>
-        <div class="card-row">
-            <h3 class="subname">css</h3>
-            <img src="assets/IMG/CSS_Logo.jpeg" class="sublogo1" style="height: 49px;">
-            <ul>
-                <a href="#" class="examlinks">
-                    <li>Basic</li>
-                </a>
-                <a href="#" class="examlinks">
-                    <li>Intermediate</li>
-                </a>
-                <a href="" class="examlinks">
-                    <li>Advance</li>
-                </a>
-            </ul>
-        </div>
-        <div class="card-row">
-            <h3 class="subname">JavaScript</h3>
-            <img src="assets/IMG/JS_Logo.png" class="sublogo1" style="height: 49px;">
-            <ul>
-                <a href="#" class="examlinks">
-                    <li>Basic</li>
-                </a>
-                <a href="#" class="examlinks">
-                    <li>Intermediate</li>
-                </a>
-                <a href="" class="examlinks">
-                    <li>Advance</li>
-                </a>
-            </ul>
-        </div>
-    </div>
+  </div>
 </div>
