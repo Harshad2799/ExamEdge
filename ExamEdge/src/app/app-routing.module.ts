@@ -12,6 +12,8 @@ import { AddQuestionComponent } from './add-question/add-question.component';
 import { DeleteQuestionComponent } from './delete-question/delete-question.component';
 import { AdminreportComponent } from './admin-report/adminreport.component';
 import { AdminStudentReportsComponent } from './admin-student-reports/admin-student-reports.component';
+import { UserScoresComponent } from './user-scores/user-scores.component';
+import { UserExampageComponent } from './user-exampage/user-exampage.component';
 
 const routes: Routes = [
   {path:"userregister", component:UserRegisterComponent},
@@ -25,7 +27,9 @@ const routes: Routes = [
   {path: "addquestion", component:AddQuestionComponent},
   {path: "deletequestion", component: DeleteQuestionComponent},
   {path: "adminreport", component: AdminreportComponent},
-  {path: "reports", component:AdminStudentReportsComponent}
+  {path: "reports", component:AdminStudentReportsComponent},
+  {path: "scores", component:UserScoresComponent},
+  {path: "exampage", component:UserExampageComponent}
 
   // {path: "contactus", component: conta}
 ];

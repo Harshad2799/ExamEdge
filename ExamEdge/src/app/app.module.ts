@@ -18,6 +18,8 @@ import { DeleteQuestionComponent } from './delete-question/delete-question.compo
 import { AdminreportComponent } from './admin-report/adminreport.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminStudentReportsComponent } from './admin-student-reports/admin-student-reports.component';
+import { UserScoresComponent } from './user-scores/user-scores.component';
+import { UserExampageComponent } from './user-exampage/user-exampage.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { AdminStudentReportsComponent } from './admin-student-reports/admin-stud
     AddQuestionComponent,
     DeleteQuestionComponent,
     AdminreportComponent,
-    AdminStudentReportsComponent
+    AdminStudentReportsComponent,
+    UserScoresComponent,
+    UserExampageComponent
   ],
   imports: [
     BrowserModule,
