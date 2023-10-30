@@ -16,6 +16,7 @@ import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.compone
 import { AddQuestionComponent } from './add-question/add-question.component';
 import { DeleteQuestionComponent } from './delete-question/delete-question.component';
 import { AdminreportComponent } from './admin-report/adminreport.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AdminreportComponent } from './admin-report/adminreport.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
