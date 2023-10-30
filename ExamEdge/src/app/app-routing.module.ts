@@ -11,6 +11,7 @@ import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.compone
 import { AddQuestionComponent } from './add-question/add-question.component';
 import { DeleteQuestionComponent } from './delete-question/delete-question.component';
 import { AdminreportComponent } from './admin-report/adminreport.component';
+import { AdminStudentReportsComponent } from './admin-student-reports/admin-student-reports.component';
 
 const routes: Routes = [
   {path:"userregister", component:UserRegisterComponent},
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path:"forget", component:ForgetpasswordComponent},
   {path: "addquestion", component:AddQuestionComponent},
   {path: "deletequestion", component: DeleteQuestionComponent},
-  {path: "adminreport", component: AdminreportComponent}
+  {path: "adminreport", component: AdminreportComponent},
+  {path: "reports", component:AdminStudentReportsComponent}
 
   // {path: "contactus", component: conta}
 ];
