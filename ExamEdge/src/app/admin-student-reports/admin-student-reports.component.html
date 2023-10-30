@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="card">
+        <div class="container">
+            <h1>Search by Level</h1>
+            <label for="filter">Select Level:</label>
+            <select id="filter" [(ngModel)]="selectedLevel" >
+                <option value="Empty" selected>Empty</option>
+                <option value="all">All</option>
+                <option value="Level 1">Level 1</option>
+                <option value="Level 2">Level 2</option>
+                <option value="Level 3">Level 3</option>
+            </select>
+
+            <button (click)="filterStudents()">Load Data</button>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sr No</th>
+                        <th>Name</th>
+                        <th>Subject</th>
+                        <th>Level</th>
+                        <th>Marks</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let student of filteredStudents; let i = index">
+                        <td>{{ i + 1 }}</td>
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.subject }}</td>
+                        <td>{{ student.level }}</td>
+                        <td>{{ student.marks }}</td>
+                        <td>{{ student.marks >= 50 ? 'Passed' : 'Failed' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button>Download Data</button>
+        </div>
+
+    </div>
+    <div class="card">
+        <!-- check how much students fail and pass in a diagrammatic way with a filter for subjects-->
+        <div class="container">
+            <h1>Student Search</h1>
+            <input type="text" [(ngModel)]="search" placeholder="Search by Name or ID" name="search">
+            <button (click)="searchStudent()">Search</button>
+
+
+            <div *ngIf="selectedStudent" class="student-card">
+                <p>{{msg}}</p>
+                <h2>{{ selectedStudent.name }}</h2>
+                <p>Subjects: {{ selectedStudent.subject }}</p>
+                <p>Levels Cleared: {{ selectedStudent.level }}</p>
+                <p>Marks: {{ selectedStudent.marks }}</p>
+                <p>Status: {{ selectedStudent.status }}</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="card shadow" id="card">
+        <canvas id="pieChart" width="400" height="400"></canvas>
+      </div>
+</div>

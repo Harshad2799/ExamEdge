@@ -41,9 +41,9 @@ export class DeleteQuestionComponent {
 
 
   SubjectSelect() {
-    console.log('Selected Subject:', this.selectedSubject);
+    // console.log('Selected Subject:', this.selectedSubject);
     this.selectedQuestions = this.questions.filter(question => question.subject === this.selectedSubject);
-    console.log('Selected Questions:', this.selectedQuestions);
+    // console.log('Selected Questions:', this.selectedQuestions);
   }
 
   onDelete() {
