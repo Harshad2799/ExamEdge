@@ -6,4 +6,7 @@ import com.examedge.entity.ResultEntity;
 
 public interface ResultRopository extends JpaRepository<ResultEntity, Integer> {
 
+
+
+    
 }

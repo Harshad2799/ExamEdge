@@ -6,4 +6,6 @@ import com.examedge.entity.ApperaExamQuestion;
 
 public interface AppearExamQuestionRepository extends JpaRepository<ApperaExamQuestion, Integer> {
 
+
+    
 }

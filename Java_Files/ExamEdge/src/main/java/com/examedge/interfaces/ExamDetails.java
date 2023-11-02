@@ -6,4 +6,6 @@ import com.examedge.entity.Examdetails;
 
 public interface ExamDetails extends JpaRepository<Examdetails, Integer> {
 	
+
+    
 }

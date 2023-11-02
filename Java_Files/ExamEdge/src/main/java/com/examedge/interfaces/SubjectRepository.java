@@ -6,4 +6,6 @@ import com.examedge.entity.SubjectTable;
 
 public interface SubjectRepository extends JpaRepository<SubjectTable, Integer> {
 
+
+    
 }
