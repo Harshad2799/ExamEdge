@@ -1,0 +1,33 @@
+package com.abm.examedge.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.abm.examedge.entity.SubjectTable;
+import com.abm.examedge.interfaces.subjectInterface;
+
+@Service
+public class subjectService {
+	
+	@Autowired
+	private subjectInterface subrepo;
+	
+	
+	public void addsubject(SubjectTable sub) {
+		subrepo.save(sub);
+	}
+	
+	public Optional<SubjectTable> SearchStudent(int id) {
+		return subrepo.findById(id);
+	}
+	
+	
+	public List<SubjectTable> searchAll(){
+		List<SubjectTable> list = subrepo.findAll();
+		return list;
+	}
+	
+}

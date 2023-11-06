@@ -1,24 +1,45 @@
 <nav class="navbar navbar-expand-lg bg-body-secondary" id="mainnav">
-  <div class="container-fluid" id="navbar">
+  <div class="container-fluid" id="navbar" *ngIf="menuItem==='default'">
+    <div id="mySidebar" class="sidebar" [ngStyle]="sidebarStyles">
+      <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">×</a>
+      <a routerLink="">Home</a>
+      <a routerLink="contactUs">Contact</a>
+    </div>
+    <div id="main">
+      <button class="openbtn" (click)="openNav()">&#9776;</button>
+    </div>
+    <div class="rightlink">
+      <a routerLink="login" class="loginlink">Login</a>
+      <a routerLink="register" class="registerlink">Register</a>
+    </div>
+  </div>
+
+
+  <div class="container-fluid" id="navbar" *ngIf="menuItem==='user'">
     <div id="mySidebar" class="sidebar" [ngStyle]="sidebarStyles">
       <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">×</a>
       <a routerLink="">Home</a>
       <a routerLink="subject">Exams</a>
 
       <a routerLink="userreport">Profile</a>
-
-      <a href="#">Home</a>
-
+      <a routerLink="update">update</a>
       <a routerLink="contactUs">Contact</a>
     </div>
     <div id="main">
       <button class="openbtn" (click)="openNav()">&#9776;</button>
     </div>
-
-    <div class="rightlink">
-      <a routerLink="userlogin" class="loginlink" >Login</a>
-      <a routerLink="userregister" class="registerlink">Register</a>
+    <div >
+      <button>Logout</button>
+      <button>User name</button>
     </div>
   </div>
- 
+
+  <div class="container-fluid" id="navbar" *ngIf="menuItem==='admin'">
+    <div class="rightlink" >
+      <button style="border: none;">
+        <a routerLink="userregister" class="registerlink">admin</a>
+      </button>
+    </div>
+  </div>
+
 </nav>
