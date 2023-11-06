@@ -18,6 +18,9 @@ import { DeleteQuestionComponent } from './delete-question/delete-question.compo
 import { AdminreportComponent } from './admin-report/adminreport.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminStudentReportsComponent } from './admin-student-reports/admin-student-reports.component';
+import { AddsubjectComponent } from './addsubject/addsubject.component';
+import { UpdateUserDetailComponent } from './update-user-detail/update-user-detail.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,12 +38,15 @@ import { AdminStudentReportsComponent } from './admin-student-reports/admin-stud
     AddQuestionComponent,
     DeleteQuestionComponent,
     AdminreportComponent,
-    AdminStudentReportsComponent
+    AdminStudentReportsComponent,
+    AddsubjectComponent,
+    UpdateUserDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

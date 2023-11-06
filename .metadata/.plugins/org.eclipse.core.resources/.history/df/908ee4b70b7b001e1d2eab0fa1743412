@@ -1,0 +1,46 @@
+package com.abm.examedge.entity;
+
+import javax.persistence.ManyToOne;
+
+public class ResultEntity {
+
+	private int resultId;
+	
+	@ManyToOne
+	private SubjectTable subid;
+	
+	@ManyToOne
+	private StudentDetails sid;
+	
+	private int mark;
+	
+	
+	public int getResultId() {
+		return resultId;
+	}
+	public void setResultId(int resultId) {
+		this.resultId = resultId;
+	}
+	public int getMark() {
+		return mark;
+	}
+	public void setMark(int mark) {
+		this.mark = mark;
+	}
+	public SubjectTable getSubid() {
+		return subid;
+	}
+	public void setSubid(SubjectTable subid) {
+		this.subid = subid;
+	}
+	public StudentDetails getSid() {
+		return sid;
+	}
+	public void setSid(StudentDetails sid) {
+		this.sid = sid;
+	}
+	
+	
+	
+	
+}

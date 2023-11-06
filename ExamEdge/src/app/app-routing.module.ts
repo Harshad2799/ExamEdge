@@ -12,20 +12,23 @@ import { AddQuestionComponent } from './add-question/add-question.component';
 import { DeleteQuestionComponent } from './delete-question/delete-question.component';
 import { AdminreportComponent } from './admin-report/adminreport.component';
 import { AdminStudentReportsComponent } from './admin-student-reports/admin-student-reports.component';
+import { UpdateUserDetailComponent } from './update-user-detail/update-user-detail.component';
+import { authGuard } from './auth.guard';
 
 const routes: Routes = [
-  {path:"userregister", component:UserRegisterComponent},
-  {path:"userlogin", component:UserLoginComponent},
-  {path:"userreport",component:UserReportComponent},
-  {path: "instruction", component:InstructionPsgeComponent},
+  {path:"register", component:UserRegisterComponent},
+  {path:"login", component:UserLoginComponent},
+  {path:"user-report",component:UserReportComponent},
+  {path: "user-instruction", component:InstructionPsgeComponent, canActivate:[authGuard] },
   {path: "contactUs", component:ContactUsComponent},
   {path: "", component:HomepageComponent},
-  {path: "subject", component:SubjectsComponent},
+  {path: "user-subject", component:SubjectsComponent , canActivate:[authGuard]},
   {path:"forget", component:ForgetpasswordComponent},
-  {path: "addquestion", component:AddQuestionComponent},
-  {path: "deletequestion", component: DeleteQuestionComponent},
-  {path: "adminreport", component: AdminreportComponent},
-  {path: "reports", component:AdminStudentReportsComponent}
+  {path: "admin-addquestion", component:AddQuestionComponent},
+  {path: "admin-deletequestion", component: DeleteQuestionComponent},
+  {path: "admin-report", component: AdminreportComponent},
+  {path: "admin-reports", component:AdminStudentReportsComponent},
+  {path: "user-update", component:UpdateUserDetailComponent , canActivate:[authGuard]}
 
   // {path: "contactus", component: conta}
 ];

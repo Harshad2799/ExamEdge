@@ -1,0 +1,10 @@
+package com.abm.examedge.interfaces;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.abm.examedge.entity.StudentDetails;
+
+public interface studentDetailsInterface extends JpaRepository<StudentDetails, Integer> {
+	
+	public FetcchByUsernameAndPassword();
+}
