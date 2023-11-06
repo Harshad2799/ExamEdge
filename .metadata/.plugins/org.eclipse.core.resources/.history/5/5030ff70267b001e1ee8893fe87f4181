@@ -1,0 +1,13 @@
+package com.abm.examedge.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.abm.examedge.interfaces.studentDetailsInterface;
+
+public class studentService {
+
+	@Autowired
+	private studentDetailsInterface sturepo;
+	
+	
+}

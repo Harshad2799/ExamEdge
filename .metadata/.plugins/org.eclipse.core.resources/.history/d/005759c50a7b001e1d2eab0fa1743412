@@ -1,0 +1,86 @@
+package com.abm.examedge.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Apper_Exam_Questions")
+public class AppearExamQuestion {
+
+	@Column(name="sr_no")
+	@Id
+	private int srno;
+	
+	
+	@ManyToOne
+	@JoinColumn(name = "ex_id") 
+	private Examdetails exid;
+	
+	@ManyToOne
+	@JoinColumn(name = "Q_id")
+	private QuestionEntity Qid;
+	
+	@Column(name="level")
+	private String level;
+	
+	@Column(name="stu_ans")
+	private String stuans;
+	
+	@Column(name="correct_ans")
+	private String correctans;
+
+	public int getSrno() {
+		return srno;
+	}
+
+	public void setSrno(int srno) {
+		this.srno = srno;
+	}
+
+	
+
+	public Examdetails getExid() {
+		return exid;
+	}
+
+	public void setExid(Examdetails exid) {
+		this.exid = exid;
+	}
+
+	public QuestionEntity getQid() {
+		return Qid;
+	}
+
+	public void setQid(QuestionEntity qid) {
+		Qid = qid;
+	}
+
+	public String getLevel() {
+		return level;
+	}
+
+	public void setLevel(String level) {
+		this.level = level;
+	}
+
+	public String getStuans() {
+		return stuans;
+	}
+
+	public void setStuans(String stuans) {
+		this.stuans = stuans;
+	}
+
+	public String getCorrectans() {
+		return correctans;
+	}
+
+	public void setCorrectans(String correctans) {
+		this.correctans = correctans;
+	}
+	
+}

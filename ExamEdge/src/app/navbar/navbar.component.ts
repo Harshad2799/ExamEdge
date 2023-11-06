@@ -1,12 +1,38 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'my-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   sidebarStyles: { [key: string]: string } = {};
+  constructor(private route: Router) { }
+
+  menuItem: String = 'default'
+
+
+  ngOnInit(): void {
+    this.route.events.subscribe((val: any) => {
+
+      if (val.url) {
+        if (localStorage.getItem('user') && val.url.includes('user')) {
+          this.menuItem = "user"
+          console.warn("user ")
+        } else if (localStorage.getItem('admin') && val.url.includes('admin')) {
+          this.menuItem = "admin"
+          console.warn("admin ")
+        } else {
+          this.menuItem = "default"
+          console.warn("default ")
+        }
+
+      }
+    }
+    )
+  }
+
+
 
   openNav(): void {
     this.sidebarStyles = {
@@ -23,3 +49,4 @@ export class NavbarComponent {
   }
 
 }
+

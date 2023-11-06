@@ -18,8 +18,14 @@ import { DeleteQuestionComponent } from './delete-question/delete-question.compo
 import { AdminreportComponent } from './admin-report/adminreport.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminStudentReportsComponent } from './admin-student-reports/admin-student-reports.component';
+<<<<<<< HEAD
 import { UserScoresComponent } from './user-scores/user-scores.component';
 import { UserExampageComponent } from './user-exampage/user-exampage.component';
+=======
+import { AddsubjectComponent } from './addsubject/addsubject.component';
+import { UpdateUserDetailComponent } from './update-user-detail/update-user-detail.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+>>>>>>> cdc5026702cf1f2a2cca42b04b67be11bf247ba4
 
 @NgModule({
   declarations: [
@@ -38,13 +44,19 @@ import { UserExampageComponent } from './user-exampage/user-exampage.component';
     DeleteQuestionComponent,
     AdminreportComponent,
     AdminStudentReportsComponent,
+<<<<<<< HEAD
     UserScoresComponent,
     UserExampageComponent
+=======
+    AddsubjectComponent,
+    UpdateUserDetailComponent
+>>>>>>> cdc5026702cf1f2a2cca42b04b67be11bf247ba4
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

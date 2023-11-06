@@ -1,0 +1,20 @@
+package com.abm.examedge.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.abm.examedge.interfaces.studentDetailsInterface;
+import com.abm.examedge.entity.StudentDetails;
+
+public class studentService {
+
+	@Autowired
+	private studentDetailsInterface sturepo;
+	
+	public Optional<StudentDetails> editDetails(int id) {
+		return sturepo.findById(id);
+		
+	}
+}
