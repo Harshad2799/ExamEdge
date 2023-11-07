@@ -1,0 +1,38 @@
+package com.abm.examedge.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.abm.examedge.interfaces.studentDetailsInterface;
+import com.abm.examedge.entity.StudentDetails;
+
+@Service
+public class studentService {
+
+	@Autowired
+	private studentDetailsInterface sturepo;
+	
+	public Optional<StudentDetails> editDetails(int id) {
+		return sturepo.findById(id);	
+	}
+	
+	public void updaterecord(StudentDetails stu) {
+		sturepo.save(stu);
+		
+	}
+	
+	public String login(@RequestBody StudentDetails studetai ) {
+		StudentDetails user = sturepo.findByEmail(studetai.getEmailId());
+		if(user != null && user.getPassword().equals(studetai.getPassword())) {
+			return "Login Successfully";
+		}
+		return "data not found";
+		
+		
+	}
+}

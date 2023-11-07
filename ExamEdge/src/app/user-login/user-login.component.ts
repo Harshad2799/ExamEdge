@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -7,19 +8,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-login.component.css']
 })
 export class UserLoginComponent {
-  username!: String;
-  password!: String;
-  msg!: String;
-  constructor(private route: Router) { }
+
+ detail: Detail= new Detail()
+  
+  constructor(private route: Router,private http: HttpClient) { }
+  
   login() {
-    if (this.username == 'admin' && this.password == "Harshad@123") {
-      this.route.navigate(['admin-reports'])
-      localStorage.setItem('admin', JSON.stringify('admin'));
-    } else if (this.username == "amit" && this.password == "Amit@123") {
-      this.route.navigate(['user-report'])
-      localStorage.setItem('user', JSON.stringify('user'))
-    } else {
-      this.msg = 'Invalid Credentials';
-    }
+    let url=`http://localhost:8080/login`;
+    this.http.post(url, this.detail, { responseType: 'text'}).subscribe(data => {
+    })
+
+    console.log(this.detail)
   }
+}
+
+export class Detail{
+  emailId!: String;
+  password!: String;
+  msg: String = "invalid Crendentials";
 }

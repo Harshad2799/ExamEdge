@@ -1,0 +1,11 @@
+package com.abm.examedge.interfaces;
+
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.abm.examedge.entity.QuestionEntity;
+
+public interface questionInterface extends JpaRepository<QuestionEntity, Integer> {
+	
+	public ??? findBySubjectId
+}

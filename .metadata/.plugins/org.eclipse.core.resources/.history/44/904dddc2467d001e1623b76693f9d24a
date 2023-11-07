@@ -1,0 +1,5 @@
+package com.abm.examedge.exception;
+
+public class questionException {
+
+}

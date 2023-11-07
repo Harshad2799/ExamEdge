@@ -16,12 +16,12 @@ export class UpdateUserDetailComponent {
 
   updaterecord(){
     
-    // let url = `http://localhost:8080/updaterecord/${this.update.id}`;
+    let url = `http://localhost:8080/updaterecord/${this.update.id}`;
     console.log(this.update)
-    // this.http.post(url, this.update, { responseType: 'text'}).subscribe(data => {
+    this.http.post(url, this.update, { responseType: 'text'}).subscribe(data => {
   }
+)}
 }
-// }
 
 
 
