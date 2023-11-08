@@ -12,7 +12,7 @@
                             Name is required
                         </div>
                     </div>
-                    <input type="text" placeholder="Enter your name" name="uname" required [(ngModel)]=name
+                    <input type="text" placeholder="Enter your name" name="uname" required [(ngModel)]="user.name"
                         #uname="ngModel" minlength="3"><br>
 
                 </div>
@@ -25,17 +25,17 @@
                         <div class="validate" *ngIf="uemail.hasError('pattern')">Wrong email </div>
                     </div>
                     <input type="email" placeholder="Email" name="uemail" required
-                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" [(ngModel)]="email"
+                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" [(ngModel)]="user.emailId"
                         #uemail="ngModel"><br>
 
                 </div>
                 <div>
                     <label>Phone number *</label><br>
-                        <div class="validate" *ngIf="phoneNo.hasError('minlength')">
-                            Phone number should be 10 numbers
-                        </div>
-                    <input type="text" placeholder="Enter your number" name="phoneNo" required [(ngModel)]=phone_No
-                        minlength="10" #phoneNo = "ngModel"><br>
+                    <div class="validate" *ngIf="phoneNo.hasError('minlength')">
+                        Phone number should be 10 numbers
+                    </div>
+                    <input type="text" placeholder="Enter your number" name="phoneNo" required
+                        [(ngModel)]="user.phoneNo" minlength="10" #phoneNo="ngModel"><br>
                 </div>
                 <div>
                     <label>Password *</label><br>
@@ -49,8 +49,8 @@
                             be 8</div>
 
                     </div>
-                    <input type="text" placeholder="Enter password" name="upassword" required [(ngModel)]=password
-                        #upassword="ngModel"
+                    <input type="text" placeholder="Enter password" name="upassword" required
+                        [(ngModel)]="user.password" #upassword="ngModel"
                         pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}"
                         minlength="8"><br>
                 </div>
@@ -63,11 +63,12 @@
                         </div>
                     </div>
                     <input type="password" placeholder="Confirm password" name="uconfirmPassword" required
-                        [(ngModel)]="confirmPassword" #uconfirmPassword="ngModel">
+                        [(ngModel)]="user.confirmPassword" #uconfirmPassword="ngModel">
                 </div>
+                <button class="btn" type="submit">Register</button>
             </form>
         </div>
-        <button class="btn" type="submit">Register</button>
+        
         <div class="message">
             <p>Already have account ? <a routerLink="/userlogin">sign in</a></p>
         </div>

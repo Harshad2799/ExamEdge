@@ -12,13 +12,13 @@ import { AddQuestionComponent } from './add-question/add-question.component';
 import { DeleteQuestionComponent } from './delete-question/delete-question.component';
 import { AdminreportComponent } from './admin-report/adminreport.component';
 import { AdminStudentReportsComponent } from './admin-student-reports/admin-student-reports.component';
-<<<<<<< HEAD
+
 import { UserScoresComponent } from './user-scores/user-scores.component';
 import { UserExampageComponent } from './user-exampage/user-exampage.component';
-=======
+
 import { UpdateUserDetailComponent } from './update-user-detail/update-user-detail.component';
 import { authGuard } from './auth.guard';
->>>>>>> cdc5026702cf1f2a2cca42b04b67be11bf247ba4
+
 
 const routes: Routes = [
   {path:"register", component:UserRegisterComponent},
@@ -29,20 +29,20 @@ const routes: Routes = [
   {path: "", component:HomepageComponent},
   {path: "user-subject", component:SubjectsComponent , canActivate:[authGuard]},
   {path:"forget", component:ForgetpasswordComponent},
-<<<<<<< HEAD
+
   {path: "addquestion", component:AddQuestionComponent},
   {path: "deletequestion", component: DeleteQuestionComponent},
   {path: "adminreport", component: AdminreportComponent},
   {path: "reports", component:AdminStudentReportsComponent},
   {path: "scores", component:UserScoresComponent},
-  {path: "exampage", component:UserExampageComponent}
-=======
+  {path: "exampage", component:UserExampageComponent},
+
   {path: "admin-addquestion", component:AddQuestionComponent},
   {path: "admin-deletequestion", component: DeleteQuestionComponent},
   {path: "admin-report", component: AdminreportComponent},
   {path: "admin-reports", component:AdminStudentReportsComponent},
   {path: "user-update", component:UpdateUserDetailComponent , canActivate:[authGuard]}
->>>>>>> cdc5026702cf1f2a2cca42b04b67be11bf247ba4
+
 
   // {path: "contactus", component: conta}
 ];
