@@ -14,10 +14,12 @@ export class UserLoginComponent {
   constructor(private route: Router,private http: HttpClient) { }
   
   login() {
-    let url=`http://localhost:8080/login`;
+    let url=`http://localhost:8080/student/login`;
     this.http.post(url, this.detail, { responseType: 'text'}).subscribe(data => {
     })
-
+    let c = this.route.navigate(["/user-report"])
+    localStorage.setItem("credential",JSON.stringify(c));
+    
     console.log(this.detail)
   }
 }

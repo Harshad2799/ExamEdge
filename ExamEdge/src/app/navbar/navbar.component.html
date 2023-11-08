@@ -19,27 +19,24 @@
     <div id="mySidebar" class="sidebar" [ngStyle]="sidebarStyles">
       <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">×</a>
       <a routerLink="">Home</a>
-      <a routerLink="subject">Exams</a>
+      <a routerLink="user-subject">Exams</a>
 
-      <a routerLink="userreport">Profile</a>
-      <a routerLink="update">update</a>
-      <a routerLink="contactUs">Contact</a>
+      <a routerLink="user-report">Profile</a>
+      <a routerLink="user-update">update</a>
+      <a routerLink="contactUs">Feed back</a>
     </div>
     <div id="main">
       <button class="openbtn" (click)="openNav()">&#9776;</button>
     </div>
     <div >
-      <button>Logout</button>
-      <button>User name</button>
+      <button class="registerlink">Logout</button>
+      <input  class="registerlink" />
     </div>
   </div>
 
-  <div class="container-fluid" id="navbar" *ngIf="menuItem==='admin'">
-    <div class="rightlink" >
-      <button style="border: none;">
-        <a routerLink="userregister" class="registerlink">admin</a>
-      </button>
-    </div>
+  <div class="container-fluid" id="navbar" *ngIf="menuItem==='admin'" style="display: flex;
+  justify-content: end">
+      <button style="border: none;" class="registerlink">Admin</button>
   </div>
 
 </nav>
