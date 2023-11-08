@@ -17,10 +17,15 @@ export class UserLoginComponent {
     let url=`http://localhost:8080/student/login`;
     this.http.post(url, this.detail, { responseType: 'text'}).subscribe(data => {
     })
+    if(this.detail.status!= false){
     let c = this.route.navigate(["/user-report"])
-    localStorage.setItem("credential",JSON.stringify(c));
+    sessionStorage.setItem("credential",JSON.stringify(c));
+    console.log(c)
     
     console.log(this.detail)
+    }else{
+      this.
+    }
   }
 }
 
