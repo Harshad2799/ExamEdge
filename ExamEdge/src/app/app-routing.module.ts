@@ -21,7 +21,7 @@ const routes: Routes = [
   {path:"user-report",component:UserReportComponent},
   {path: "user-instruction", component:InstructionPsgeComponent, canActivate:[authGuard] },
   {path: "contactUs", component:ContactUsComponent},
-  {path: "", component:HomepageComponent},
+  {path: "home", component:HomepageComponent},
   {path: "user-subject", component:SubjectsComponent , canActivate:[authGuard]},
   {path:"forget", component:ForgetpasswordComponent},
   {path: "admin-addquestion", component:AddQuestionComponent},

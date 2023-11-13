@@ -10,27 +10,34 @@ import { Router } from '@angular/router';
 export class UserLoginComponent {
 
  detail: Detail= new Detail()
-  
+  data!: any
+  messageIfAny!: String
   constructor(private route: Router,private http: HttpClient) { }
   
   login() {
     let url=`http://localhost:8080/student/login`;
-    this.http.post(url, this.detail, { responseType: 'text'}).subscribe(data => {
+    this.http.post<any>(url, this.detail).subscribe(data => {
+      this.data = data;
+      // alert(this.data)
+      if(this.data.status== true){
+        let c = this.route.navigate(["/user-report"])
+        sessionStorage.setItem("credential",JSON.stringify(c));
+        
+        // console.log(c)
+        // console.log(this.detail)
+        }else{
+          this.detail.msg = data.messageIfAny;
+          this.route.navigate(["/login"])
+        }
     })
-    if(this.detail.status!= false){
-    let c = this.route.navigate(["/user-report"])
-    sessionStorage.setItem("credential",JSON.stringify(c));
-    console.log(c)
     
-    console.log(this.detail)
-    }else{
-      this.
-    }
   }
 }
+
+
 
 export class Detail{
   emailId!: String;
   password!: String;
-  msg: String = "invalid Crendentials";
+  msg!: String ;
 }

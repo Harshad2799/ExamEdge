@@ -7,15 +7,18 @@
                     <hr>
                     <div class="credentials">
                         <label>User Name</label>
-                        <input type="text" placeholder="Enetr your username" [(ngModel)]="detail.emailId" name="username">
+                        <input type="text" placeholder="Enetr your username" [(ngModel)]="detail.emailId" name="emailId">
                     </div>
                     <div class="credential2">
                         <label>Password</label>
                         <input type="text" placeholder="Enter your password" [(ngModel)]="detail.password" name="passowrd"><br>
                     </div>
+                    
                     <button type="submit" >
                         Login
                     </button>
+
+                    <div class="message">{{detail.msg}}</div>
                     <!-- <p style="color: red; margin-left: 98px" *ngIf="">{{detail.msg}}</p> -->
                     <div class="forgotpass">
                         <a routerLink="/forget" style="color: black; text-decoration: none; margin-left: 37px">Forgot Password ? </a>

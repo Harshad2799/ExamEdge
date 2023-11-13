@@ -77,3 +77,10 @@ input {
     margin-left: 35px;
     color: red;
 }
+
+.registermsg{
+    color: red;
+    font-size: 19px;
+    margin-left: 146px;
+    margin-top: 15px;
+}
