@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,35 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./subjects.component.css']
 })
 export class SubjectsComponent {
-  subjects = [
-    {
-      name: 'Java',
-      logo: 'assets/IMG/Java_Logo.png',
-      
-    },
-    {
-      name: 'Python',
-      logo: 'assets/IMG/Pyhon_logo.png' ,
-      
-    },
-    {
-      name: 'C',
-      logo: 'assets/IMG/C_Logo.png',
-      
-    },
-    {
-      name: 'HTML5',
-      logo: 'assets/IMG/HTML5_logo.png',
-      
-    },
-    {
-      name: 'CSS',
-      logo: 'assets/IMG/CSS_Logo.jpeg',
-      
-    },
-    {
-      name: 'JavaScript',
-      logo: 'assets/IMG/JS_Logo.png',
-    }
-  ];
+  constructor(private http: HttpClient){}
+  subjects: Subject[] = [];
+
+
+  showSubjects() {
+    let url = `http://localhost:8080/allsubjects`;
+    this.http.get<Subject[]>(url).subscribe(data => {
+      this.subjects = data;
+    });
+  }
+
+  ngOnInit(): void {
+    this.showSubjects();
+  }
+
+}
+
+export class Subject{
+  name!: String 
+  logo!: String
 }

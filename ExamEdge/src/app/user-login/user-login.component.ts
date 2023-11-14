@@ -18,13 +18,13 @@ export class UserLoginComponent {
     let url=`http://localhost:8080/student/login`;
     this.http.post<any>(url, this.detail).subscribe(data => {
       this.data = data;
-      // alert(this.data)
-      if(this.data.status== true){
+      
+      if(this.detail.emailId == "Admin" && this.detail.password =="Admin@123"){
+        this.route.navigate(["/admin-report"])
+      }
+      else if(this.data.status== true){
         let c = this.route.navigate(["/user-report"])
-        sessionStorage.setItem("credential",JSON.stringify(c));
-        
-        // console.log(c)
-        // console.log(this.detail)
+        sessionStorage.setItem("EmailId", data.emailId);
         }else{
           this.detail.msg = data.messageIfAny;
           this.route.navigate(["/login"])

@@ -29,14 +29,13 @@
       <button class="openbtn" (click)="openNav()">&#9776;</button>
     </div>
     <div >
-      <button class="registerlink">Logout</button>
-      <input  class="registerlink" />
+      <button class="registerlink" (click)="logout()">Logout</button>
     </div>
   </div>
 
   <div class="container-fluid" id="navbar" *ngIf="menuItem==='admin'" style="display: flex;
   justify-content: end">
-      <button style="border: none;" class="registerlink">Admin</button>
+      <button style="border: none;" class="registerlink" (click)="logout()">Admin</button>
   </div>
 
 </nav>

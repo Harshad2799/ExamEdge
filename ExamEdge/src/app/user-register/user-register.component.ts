@@ -14,7 +14,10 @@ export class UserRegisterComponent {
   constructor(private http: HttpClient, private route: Router){}
   data!: any
   msg!: String
+  file: File | undefined;
   registration(){
+
+    
     let url=`http://localhost:8080/addstudent`;
     this.http.post<any>(url, this.detail).subscribe(data => {
       if(data.status==true){
@@ -24,6 +27,10 @@ export class UserRegisterComponent {
       }
     })
   }
+
+  handleFileInput(event: any): void {
+    this.file = event.target.files[0];
+  }
 }
 
 export class Detail{
@@ -32,4 +39,5 @@ export class Detail{
   password!: String
   phoneNo!: String
   confirmPassword!: String
+  profileImageUrl!: String
 }
