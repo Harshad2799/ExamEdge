@@ -1,43 +1,63 @@
 <div class="card shadow p-3">
+  <form (ngSubmit)="addquestion()">
     <div class="form-group">
-      <label for="question" >Question</label>
-      <input type="text" class="form-control" id="question" name = "uquestion" [(ngModel)]="question" #uquestion="ngModel">
+      <label>Subject</label>
+      <select  [(ngModel)]="id" name="id" (change)="subjectdropdown()">
+        <option>Subject</option>
+        <option *ngFor="let subject of subjectlist" [value]="subject.id">{{ subject.name }}</option>
+      </select>
     </div>
-  
     <div class="form-group">
-      <label for="option1">Option 1</label>
-      <input type="text" class="form-control" id="option1" name = "uoption1" [(ngModel)]="option1" #uoption1="ngModel">
-    </div>
-  
-    <div class="form-group">
-      <label for="option2">Option 2</label>
-      <input type="text" class="form-control" id="option2" name = "uoption2" [(ngModel)]="option2" #uoption2="ngModel">
-    </div>
-  
-    <div class="form-group">
-      <label for="option3">Option 3</label>
-      <input type="text" class="form-control" id="option3" name = "uoption3" [(ngModel)]="option3" #uoption3="ngModel">
-    </div>
-  
-    <div class="form-group">
-      <label for="option4">Option 4</label>
-      <input type="text" class="form-control" id="option4" name = "uoption4" [(ngModel)]="option4" #uoption4="ngModel">
-    </div>
-  
-    <div class="form-group">
-      <label for="correctAnswer">Correct Answer</label>
-      <input type="text" class="form-control" id="correctAnswer" name = "uanswer" [(ngModel)]="answer" #uanswer="ngModel">
-    </div>
-  
-    <button class="btn btn-primary btn-md" type="button" id="addQuestion" >Add Question</button>
-  
-    
-  
-    <div class="mb-3">
-        <label for="formFileSm" id="uploadfilelabel" class="form-label">Upload CSV File</label>
-        <input class="form-control form-control-sm" id="formFileSm" type="file">
+      <label for="question">Question</label>
+      <input type="text" class="form-control" id="question" name="uquestion" [(ngModel)]="detail.question"
+        #uquestion="ngModel">
     </div>
 
-    <button class="btn btn-success btn-md" type="button" id="uploadFile">Upload File</button>
+    <div class="form-group">
+      <label for="option1">Option 1</label>
+      <input type="text" class="form-control" id="option1" name="uoption1" [(ngModel)]="detail.option1"
+        #uoption1="ngModel">
+    </div>
+
+    <div class="form-group">
+      <label for="option2">Option 2</label>
+      <input type="text" class="form-control" id="option2" name="uoption2" [(ngModel)]="detail.option2"
+        #uoption2="ngModel">
+    </div>
+
+    <div class="form-group">
+      <label for="option3">Option 3</label>
+      <input type="text" class="form-control" id="option3" name="uoption3" [(ngModel)]="detail.option3"
+        #uoption3="ngModel">
+    </div>
+
+    <div class="form-group">
+      <label for="option4">Option 4</label>
+      <input type="text" class="form-control" id="option4" name="uoption4" [(ngModel)]="detail.option4"
+        #uoption4="ngModel">
+    </div>
+
+    <div class="form-group">
+      <label for="correctAnswer">Correct Answer</label>
+      <input type="text" class="form-control" id="correctAnswer" name="uanswer" [(ngModel)]="detail.answer"
+        #uanswer="ngModel">
+    </div>
+
+    <div class="form-group">
+      <label for="correctAnswer">Level</label>
+      <input type="text" class="form-control" id="correctAnswer" name="uanswer" [(ngModel)]="detail.level"
+        #uanswer="ngModel">
+    </div>
+
+    <button class="btn btn-primary btn-md" type="submit" id="addQuestion">Add Question</button>
+
+  </form>
+
+
+  <div class="mb-3">
+    <label for="formFileSm" id="uploadfilelabel" class="form-label">Upload CSV File</label>
+    <input class="form-control form-control-sm" id="formFileSm" type="file">
   </div>
-  
+
+  <button class="btn btn-success btn-md" type="button" id="uploadFile">Upload File</button>
+</div>

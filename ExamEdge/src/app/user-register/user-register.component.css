@@ -5,7 +5,7 @@ body {
 .card {
     margin: auto;
     background-color: whitesmoke;
-    height: 640px;
+    height: 718px;
     width: 504px;
     margin-top: 0px
 }
@@ -76,4 +76,11 @@ input {
 .validate{
     margin-left: 35px;
     color: red;
+}
+
+.registermsg{
+    color: red;
+    font-size: 19px;
+    margin-left: 146px;
+    margin-top: 15px;
 }

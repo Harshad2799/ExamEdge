@@ -16,10 +16,9 @@ export class NavbarComponent implements OnInit {
     this.route.events.subscribe((val: any) => {
 
       if (val.url) {
-        if (localStorage.getItem('user') && val.url.includes('user')) {
+        if (val.url.includes('user')) {
           this.menuItem = "user"
-          console.warn("user ")
-        } else if (localStorage.getItem('admin') && val.url.includes('admin')) {
+        } else if (val.url.includes('admin')) {
           this.menuItem = "admin"
           console.warn("admin ")
         } else {
@@ -32,7 +31,9 @@ export class NavbarComponent implements OnInit {
     )
   }
 
-
+  logout(){
+    this.route.navigate(["/home"])
+  }
 
   openNav(): void {
     this.sidebarStyles = {

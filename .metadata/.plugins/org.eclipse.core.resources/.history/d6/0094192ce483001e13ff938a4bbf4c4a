@@ -1,0 +1,7 @@
+package com.abm.examedge.exception;
+
+public class QuestionException extends RuntimeException {
+	public void QuestionException() {
+		super();
+	}
+}

@@ -24,10 +24,10 @@ const routes: Routes = [
   {path:"register", component:UserRegisterComponent},
   {path:"login", component:UserLoginComponent},
   {path:"user-report",component:UserReportComponent},
-  {path: "user-instruction", component:InstructionPsgeComponent, canActivate:[authGuard] },
+  {path: "user-instruction", component:InstructionPsgeComponent},
   {path: "contactUs", component:ContactUsComponent},
-  {path: "", component:HomepageComponent},
-  {path: "user-subject", component:SubjectsComponent , canActivate:[authGuard]},
+  {path: "home", component:HomepageComponent},
+  {path: "user-subject", component:SubjectsComponent },
   {path:"forget", component:ForgetpasswordComponent},
 
   {path: "addquestion", component:AddQuestionComponent},
