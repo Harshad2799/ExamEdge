@@ -1,0 +1,6 @@
+package com.abm.examedge.dto;
+
+public class SubjectDto {
+	private int id;
+	private String name;
+}

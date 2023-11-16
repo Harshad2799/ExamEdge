@@ -11,32 +11,36 @@ export class AddQuestionComponent {
   constructor(private http: HttpClient) { }
   data!: any
   id: number | undefined
-  subjects: Subject[] = [];
+  subjectlist: Subject[] = [];
   
   ngOnInit() {
     this.subjectdropdown();
   }
+
   subjectdropdown() {
     let url = `http://localhost:8080/allsubjects`
     this.http.get<any>(url).subscribe(data => {
-      this.subjects = data
+      this.subjectlist = data
     })
   }
   addquestion() {
-    let url = `http://localhost:8080/addquestion`;
     console.log(this.detail)
-    this.http.post(url, this.detail).subscribe(data => {
-      this.data = data
+    let url = `http://localhost:8080/addquestion`;
+    alert(this.id)
+    this.detail.subject.id = this.id;
+    this.http.post<any>(url, this.detail).subscribe(data => {
       console.log('Adding question for Subject ID:', this.id);
       console.log(this.detail)
     })
 
+    console.log(this.id)
+
   }
 
-  onSubjectSelected() {
-    // Access the selected subject ID
-    console.log(this.id)
-  }
+  // onSubjectSelected() {
+  //   // Access the selected subject ID
+  //   console.log(this.id)
+  // }
 
 }
 
@@ -49,7 +53,7 @@ export class questioDetails {
   option4!: String
   answer!: String
   level!: String
-  subjects: Subject = new Subject();
+  subject: Subject = new Subject();
 }
 
 export class Subject {

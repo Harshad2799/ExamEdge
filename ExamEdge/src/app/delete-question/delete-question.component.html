@@ -5,7 +5,7 @@
         <div class="input-group" style="width: 250px;">
             <select class="custom-select form-control" id="subjectSelect" [(ngModel)]="selectedSubject" name="selectedSubject">
                 <option>-------</option>
-                <option *ngFor="let subject of subjects" [value]="subject">{{subject}}</option>
+                <option *ngFor="let subject of subjectlist" [value]="subject">{{name}}</option>
               </select>
           <div class="input-group-append">
             <button type="button" class="btn btn-secondary" (click)="SubjectSelect()" style="margin-left: 55px;">Go</button>

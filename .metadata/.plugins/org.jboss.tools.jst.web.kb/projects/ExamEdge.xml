@@ -101,7 +101,6 @@
   <path value="C:/Users/harshad.jawale/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.7.17/spring-boot-starter-logging-2.7.17.jar"/>
  </paths>
  <validation>
-  <core validator-id="jboss.cdi.core"/>
   <el/>
  </validation>
  <aliases/>
