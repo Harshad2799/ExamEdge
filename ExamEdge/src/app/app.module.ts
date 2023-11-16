@@ -21,6 +21,8 @@ import { AdminStudentReportsComponent } from './admin-student-reports/admin-stud
 import { AddsubjectComponent } from './addsubject/addsubject.component';
 import { UpdateUserDetailComponent } from './update-user-detail/update-user-detail.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { UserScoreComponent } from './user-score/user-score.component';
+import { UserExampageComponent } from './user-exampage/user-exampage.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     AdminreportComponent,
     AdminStudentReportsComponent,
     AddsubjectComponent,
-    UpdateUserDetailComponent
+    UpdateUserDetailComponent,
+    UserScoreComponent,
+    UserExampageComponent
   ],
   imports: [
     BrowserModule,

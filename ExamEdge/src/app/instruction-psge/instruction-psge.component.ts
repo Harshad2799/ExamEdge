@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-instruction-psge',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class InstructionPsgeComponent {
 
+constructor(private route:Router,private http:HttpClient){}
+
+  startexam(){
+this.route.navigate(["/user-exampage"])
+  }
 }
