@@ -26,6 +26,8 @@ export class UserRegisterComponent {
         this.msg = data.messagIfAny;
       }
     })
+
+    
   }
 
   handleFileInput(event: any): void {

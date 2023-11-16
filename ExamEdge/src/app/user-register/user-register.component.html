@@ -10,7 +10,7 @@
                     <div *ngIf="uname.invalid && uname.touched">
                         <div *ngIf="uname.hasError('required')" class="validate">
                             Name is required
-                        </div>
+                        </div>   
                     </div>
                     <input type="text" placeholder="Enter your name" name="uname" required [(ngModel)]="detail.name"
                         #uname="ngModel" minlength="3"><br>
