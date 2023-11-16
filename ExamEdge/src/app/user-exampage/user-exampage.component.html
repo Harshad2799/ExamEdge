@@ -1,0 +1,52 @@
+
+<head>
+    <link rel="stylesheet" href="D:\Examedge\ExamEdge\CSS Files\exampage.css">
+</head>
+
+
+<div class="container">
+    <div class="question-card">
+        <h1>Online Exam</h1>
+        <div class="question" *ngFor="let questions of mcqQuestions">
+           <p>{{questions.question}}</p>
+        </div>
+        <div class="options">
+            <div class="option">
+                <label class="radio-label">
+                    <input type="radio" name="q1" value="a">
+                    Java Virtual Machine
+                </label>
+            </div>
+            <div class="option">
+                <label class="radio-label">
+                    <input type="radio" name="q1" value="b">
+                    Just Virtual Machine
+                </label>
+            </div>
+            <div class="option">
+                <label class="radio-label">
+                    <input type="radio" name="q1" value="c">
+                    JavaScript Virtual Machine
+                </label>
+            </div>
+            <div class="option">
+                <label class="radio-label">
+                    <input type="radio" name="q1" value="d">
+                    Jumbo Virtual Machine
+                </label>
+            </div>
+        </div>
+        <div class="nav-buttons">
+            <button style="background-color: #007BFF;">Previous</button>
+            <button style="background-color:#28A745">Next</button>
+            <button style="background-color:#DC3545"><a routerLink="/scores">Finish</a></button>
+        </div>
+    </div>
+    <div class="question-nav">
+        <h2>Question Navigation</h2>
+        <ul>
+            <li><a href="#">1</a></li>
+            <!-- Add more question links here -->
+        </ul>
+    </div>
+</div>
