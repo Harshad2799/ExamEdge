@@ -1,4 +1,7 @@
+
 import { HttpClient } from '@angular/common/http';
+
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,6 +10,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-exampage.component.css']
 })
 export class UserExampageComponent {
+
 
   qustionList: question[] = []
   constructor(private http: HttpClient){}
