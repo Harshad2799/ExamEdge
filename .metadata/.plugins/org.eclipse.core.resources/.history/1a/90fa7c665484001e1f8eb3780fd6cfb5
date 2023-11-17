@@ -1,0 +1,12 @@
+package com.abm.examedge.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.abm.examedge.entity.Subject;
+
+public interface SubjectRepository extends JpaRepository<Subject, Integer> {
+	
+	@Query("select count(s) from Subject s where s.name =?1 ")
+	public Long findBySUbjectName(String name);
+}
