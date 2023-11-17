@@ -2,7 +2,7 @@
 
     <div class="card">
         <div class="container">
-            <form (ngSubmit)="registration()" enctype="multipart/form-data">
+            <form (ngSubmit)="registration()">
                 <h1>Registration </h1>
                 <hr>
                 <div>
@@ -13,7 +13,7 @@
                         </div>   
                     </div>
 
-                    <input type="text" placeholder="Enter your name" name="uname" required [(ngModel)]="user.name"
+                   
 
                     <input type="text" placeholder="Enter your name" name="uname" required [(ngModel)]="detail.name"
 
@@ -30,7 +30,7 @@
                     </div>
                     <input type="email" placeholder="Email" name="uemail" required
 
-                        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" [(ngModel)]="user.emailId"
+                      
 
                         pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" [(ngModel)]="detail.emailId"
 
@@ -44,8 +44,7 @@
                     </div>
                     <input type="text" placeholder="Enter your number" name="phoneNo" required
 
-                        [(ngModel)]="user.phoneNo" minlength="10" #phoneNo="ngModel"><br>
-
+                       
                         [(ngModel)]="detail.phoneNo" minlength="10" #phoneNo="ngModel"><br>
 
                 </div>
@@ -62,8 +61,7 @@
 
                     </div>
 
-                    <input type="text" placeholder="Enter password" name="upassword" required
-                        [(ngModel)]="user.password" #upassword="ngModel"
+                    
 
                     <input type="password" placeholder="Enter password" name="upassword" required
                         [(ngModel)]="detail.password" #upassword="ngModel"
