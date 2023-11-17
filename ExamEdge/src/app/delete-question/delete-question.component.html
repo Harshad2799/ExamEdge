@@ -1,42 +1,43 @@
 <div class="card shadow">
-    <form (ngSubmit)="onDelete()">
-      <div class="form-group">
-        <label for="subjectSelect">Select Subject</label>
-        <div class="input-group" style="width: 250px;">
-            <select class="custom-select form-control" id="subjectSelect" [(ngModel)]="selectedSubject" name="selectedSubject">
-                <option>-------</option>
-                <option *ngFor="let subject of subjectlist" [value]="subject">{{name}}</option>
-              </select>
-          <div class="input-group-append">
-            <button type="button" class="btn btn-secondary" (click)="SubjectSelect()" style="margin-left: 55px;">Go</button>
-          </div>
+  <form (ngSubmit)="onDelete()">
+    <div class="form-group">
+      <label for="subjectSelect">Select Subject</label>
+      <div class="input-group" style="width: 250px;">
+        <select class="custom-select form-control" id="subjectSelect" [(ngModel)]="selectedSubject"
+          name="selectedSubject">
+          <option>-------</option>
+          <option *ngFor="let subject of subjectlist" [value]="subject.id">{{subject.name}}</option>
+        </select>
+        <div class="input-group-append">
+          <button type="button" class="btn btn-secondary" (click)="SubjectSelect()"
+            style="margin-left: 55px;">Go</button>
         </div>
       </div>
-  
-      <table class="table table-bordered mt-3">
-        <thead>
-          <tr>
-            <th>Question</th>
-            <th>Option 1</th>
-            <th>Option 2</th>
-            <th>Option 3</th>
-            <th>Option 4</th>
-            <th>Task</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let question of selectedQuestions; let i = index">
-            <td>{{ question.questionText }}</td>
-            <td>{{ question.option1 }}</td>
-            <td>{{ question.option2 }}</td>
-            <td>{{ question.option3 }}</td>
-            <td>{{ question.option4 }}</td>
-            <td>
-              <button type="button" class="btn btn-danger" (click)="onDeleteQuestion(i)">Delete</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </form>
-  </div>
-  
+    </div>
+  </form>
+  <table class="table table-bordered mt-3">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Option 1</th>
+        <th>Option 2</th>
+        <th>Option 3</th>
+        <th>Option 4</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let question of selectedQuestions; let i = index">
+        <td>{{ question.questionText }}</td>
+        <td>{{ question.option1 }}</td>
+        <td>{{ question.option2 }}</td>
+        <td>{{ question.option3 }}</td>
+        <td>{{ question.option4 }}</td>
+        <td>
+          <button type="button" class="btn btn-danger" (click)="onDeleteQuestion(i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
