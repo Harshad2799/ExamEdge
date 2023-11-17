@@ -1,8 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
-
-
 import { Router } from '@angular/router';
 
 
@@ -15,12 +13,16 @@ import { Router } from '@angular/router';
 
 export class UserRegisterComponent {
 
+  data:any
+
   detail: Detail = new Detail()
   constructor(private http: HttpClient, private route: Router){}
-  data!: any
   msg!: String
   file: File | undefined;
   registration(){
+
+
+    
     let url=`http://localhost:8080/addstudent`;
     this.http.post<any>(url, this.detail).subscribe(data => {
       if(data.status==true){
@@ -31,6 +33,10 @@ export class UserRegisterComponent {
     })
 
     
+  }
+
+  handleFileInput(event: any): void {
+    this.file = event.target.files[0];
   }
 }
 

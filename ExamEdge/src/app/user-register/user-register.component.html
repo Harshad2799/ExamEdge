@@ -2,7 +2,7 @@
 
     <div class="card">
         <div class="container">
-            <form (ngSubmit)="registration()">
+            <form (ngSubmit)="registration()" enctype="multipart/form-data">
                 <h1>Registration </h1>
                 <hr>
                 <div>
@@ -12,6 +12,8 @@
                             Name is required
                         </div>
                     </div>
+
+
 
                     <input type="text" placeholder="Enter your name" name="uname" required [(ngModel)]="detail.name"
                         #uname="ngModel" minlength="3"><br>
@@ -52,6 +54,8 @@
 
                     </div>
 
+
+
                     <input type="password" placeholder="Enter password" name="upassword" required
                         [(ngModel)]="detail.password" #upassword="ngModel"
                         pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}"
@@ -66,24 +70,28 @@
                         </div>
                     </div>
 
-                    <input type="password" placeholder="Confirm password" name="uconfirmPassword" required
-                        [(ngModel)]="detail.confirmPassword" #uconfirmPassword="ngModel">
+                    <input type="text" placeholder="Confirm password" name="uconfirmPassword" required
+                    [(ngModel)]="detail.confirmPassword" #uconfirmPassword="ngModel">
+                </div>
+
+
+
+                
+
+                <!-- <div>
+                    <label for="profileImage">Profile Image:</label>
+                    <input type="file" id="profileImage" name="profileImage" (change)="handleFileInput($event)" required>
+                </div> -->
+                <div class="registermsg">
+                    <h4>{{msg}}</h4>
                 </div>
                 <button class="btn" type="submit">Register</button>
             </form>
         </div>
     </div>
-    <!-- <div>
-                    <label for="profileImage">Profile Image:</label>
-                    <input type="file" id="profileImage" name="profileImage" (change)="handleFileInput($event)" required>
-                </div> -->
-    <div class="registermsg">
-        <h4>{{msg}}</h4>
-    </div>
-    <button class="btn" type="submit">Register</button>
-
 
 
     <div class="message">
         <p>Already have account ? <a routerLink="/login">sign in</a></p>
     </div>
+</body>

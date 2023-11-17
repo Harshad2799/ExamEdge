@@ -12,12 +12,12 @@ import { AddQuestionComponent } from './add-question/add-question.component';
 import { DeleteQuestionComponent } from './delete-question/delete-question.component';
 import { AdminreportComponent } from './admin-report/adminreport.component';
 import { AdminStudentReportsComponent } from './admin-student-reports/admin-student-reports.component';
-
 import { UserScoresComponent } from './user-scores/user-scores.component';
 import { UserExampageComponent } from './user-exampage/user-exampage.component';
-
 import { UpdateUserDetailComponent } from './update-user-detail/update-user-detail.component';
 import { authGuard } from './auth.guard';
+import { UserScoreComponent } from './user-score/user-score.component';
+
 
 
 const routes: Routes = [
@@ -29,19 +29,19 @@ const routes: Routes = [
   {path: "home", component:HomepageComponent},
   {path: "user-subject", component:SubjectsComponent },
   {path:"forget", component:ForgetpasswordComponent},
-
   {path: "addquestion", component:AddQuestionComponent},
   {path: "deletequestion", component: DeleteQuestionComponent},
   {path: "adminreport", component: AdminreportComponent},
   {path: "reports", component:AdminStudentReportsComponent},
   {path: "scores", component:UserScoresComponent},
   {path: "exampage", component:UserExampageComponent},
-
   {path: "admin-addquestion", component:AddQuestionComponent},
   {path: "admin-deletequestion", component: DeleteQuestionComponent},
   {path: "admin-report", component: AdminreportComponent},
   {path: "admin-reports", component:AdminStudentReportsComponent},
-  {path: "user-update", component:UpdateUserDetailComponent , canActivate:[authGuard]}
+  {path: "user-update", component:UpdateUserDetailComponent , canActivate:[authGuard]},
+  {path:"user-score", component:UserScoreComponent},
+  {path:"user-exampage", component:UserExampageComponent}
 
 
   // {path: "contactus", component: conta}

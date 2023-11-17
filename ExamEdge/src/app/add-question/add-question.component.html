@@ -45,8 +45,13 @@
 
     <div class="form-group">
       <label for="correctAnswer">Level</label>
-      <input type="text" class="form-control" id="correctAnswer" name="uanswer" [(ngModel)]="detail.level"
-        #uanswer="ngModel">
+      <!-- <input type="text" class="form-control" id="correctAnswer" name="uanswer" [(ngModel)]="detail.level"
+        #uanswer="ngModel"> -->
+        <select class="form-control" id="correctAnswer" name="uanswer" [(ngModel)]="detail.level" >
+          <option >Basic</option>
+          <option >Medium</option>
+          <option >Advance</option>
+        </select>
     </div>
 
     <button class="btn btn-primary btn-md" type="submit" id="addQuestion">Add Question</button>
