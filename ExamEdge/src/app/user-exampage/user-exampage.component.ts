@@ -2,7 +2,7 @@
 import { HttpClient } from '@angular/common/http';
 
 
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,17 +14,26 @@ export class UserExampageComponent {
 
 
   qustionList: question[] = []
+  currentIndex = 0
   constructor(private http: HttpClient,private route: Router){}
   ngOnInit(){
-    this.allquestions
+    this.allquestions()
   }
   allquestions(){
     let url =`http://localhost:8080/fetchquestions?id=3`
     this.http.get<any>(url).subscribe(data => {
-      console.log(data)
-      this.route.navigate(["/user-exampage"])
       this.qustionList = data
     })
+  }
+
+  readsinglequestion(){
+    if (this.currentIndex < this.qustionList.length) {
+      const currentItem = this.qustionList[this.currentIndex];
+      console.log(currentItem); // You can do something with the item, e.g., display it in the console
+      this.currentIndex++;
+    } else {
+      console.log('Reached the end of the array.');
+    }
   }
 }
 

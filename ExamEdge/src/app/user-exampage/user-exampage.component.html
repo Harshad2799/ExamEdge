@@ -1,44 +1,45 @@
-
 <body>
 
     <div class="container">
-        <div class="question-card">
-            <form (change)="allquestions()">
-            <div class="question">
-                <p>1.What is the full form of JVM?</p>
-            </div>
-            <div class="options">
-                <div class="option">
-                    <label class="radio-label">
-                        <input type="radio" name="q1" value="a">
-                        Java Virtual Machine
-                    </label>
+        <div class="question-card" *ngFor="let question of qustionList">
+            <form>
+                <div >
+                    <div class="question">
+                        <p>{{question.question}}</p>
+                    </div>
+                    <div class="options">
+                        <div class="option">
+                            <label class="radio-label">
+                                <input type="radio" name="q1" value="a">
+                                {{question.option1}}
+                            </label>
+                        </div>
+                        <div class="option">
+                            <label class="radio-label">
+                                <input type="radio" name="q1" value="b">
+                                {{question.option2}}
+                            </label>
+                        </div>
+                        <div class="option">
+                            <label class="radio-label">
+                                <input type="radio" name="q1" value="c">
+                                {{question.option3}}
+                            </label>
+                        </div>
+                        <div class="option">
+                            <label class="radio-label">
+                                <input type="radio" name="q1" value="d">
+                                {{question.option4}}
+                            </label>
+                        </div>
+                    </div>
+                    <div class="nav-buttons">
+                        <button style="background-color: #007BFF;">Previous</button>
+                        <button style="background-color:#28A745" (click)="readsinglequestion()">Next</button>
+                        <button style="background-color:#DC3545">Finish</button>
+                    </div>
                 </div>
-                <div class="option">
-                    <label class="radio-label">
-                        <input type="radio" name="q1" value="b">
-                        Just Virtual Machine
-                    </label>
-                </div>
-                <div class="option">
-                    <label class="radio-label">
-                        <input type="radio" name="q1" value="c">
-                        JavaScript Virtual Machine
-                    </label>
-                </div>
-                <div class="option">
-                    <label class="radio-label">
-                        <input type="radio" name="q1" value="d">
-                        Jumbo Virtual Machine
-                    </label>
-                </div>
-            </div>
-            <div class="nav-buttons">
-                <button style="background-color: #007BFF;">Previous</button>
-                <button style="background-color:#28A745">Next</button>
-                <button style="background-color:#DC3545">Finish</button>
-            </div>
-        </form>
+            </form>
         </div>
         <div class="question-nav">
             <h2>Question Navigation</h2>
@@ -49,7 +50,3 @@
         </div>
     </div>
 </body>
-
-
-
-
