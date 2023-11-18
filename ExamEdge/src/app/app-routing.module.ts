@@ -16,7 +16,7 @@ import { UserScoresComponent } from './user-scores/user-scores.component';
 import { UserExampageComponent } from './user-exampage/user-exampage.component';
 import { UpdateUserDetailComponent } from './update-user-detail/update-user-detail.component';
 import { authGuard } from './auth.guard';
-import { UserScoreComponent } from './user-score/user-score.component';
+import { UserScoreComponent } from './user-endscore/user-score.component';
 
 
 
@@ -33,15 +33,15 @@ const routes: Routes = [
   {path: "deletequestion", component: DeleteQuestionComponent},
   {path: "adminreport", component: AdminreportComponent},
   {path: "reports", component:AdminStudentReportsComponent},
-  {path: "scores", component:UserScoresComponent},
   {path: "exampage", component:UserExampageComponent},
   {path: "admin-addquestion", component:AddQuestionComponent},
   {path: "admin-deletequestion", component: DeleteQuestionComponent},
   {path: "admin-report", component: AdminreportComponent},
   {path: "admin-reports", component:AdminStudentReportsComponent},
   {path: "user-update", component:UpdateUserDetailComponent , canActivate:[authGuard]},
-  {path:"user-score", component:UserScoreComponent},
-  {path:"user-exampage", component:UserExampageComponent}
+  {path:"user-score", component:UserScoresComponent},
+  {path:"user-exampage", component:UserExampageComponent},
+  {path:"user-scores", component:UserScoreComponent}
 
 
   // {path: "contactus", component: conta}

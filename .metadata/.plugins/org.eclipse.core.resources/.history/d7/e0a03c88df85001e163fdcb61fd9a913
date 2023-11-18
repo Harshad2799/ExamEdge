@@ -1,0 +1,27 @@
+package com.abm.examedge.dto;
+
+public class QuestionAnswerDto {
+	private int id;
+	private String answer;
+	private enum Status;
+	
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getAnswer() {
+		return answer;
+	}
+	public void setAnswer(String answer) {
+		this.answer = answer;
+	}
+	
+	
+}
+public enum Status{
+	PASS, FAIL
+}

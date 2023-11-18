@@ -7,20 +7,10 @@
             <th>Score</th>
             <th>Level</th>
         </tr>
-        <tr>
-            <td>subject</td>
-            <td>90</td>
-            <td><span class="score-level level-high">Level1</span></td>
-        </tr>
-        <tr>
-            <td>subject</td>
-            <td>75</td>
-            <td><span class="score-level level-medium">level2</span></td>
-        </tr>
-        <tr>
-            <td>subject</td>
-            <td>60</td>
-            <td><span class="score-level level-low">level3</span></td>
+        <tr *ngFor="let m of marks">
+            <td>{{m.subject}}</td>
+            <td>{{m.score}}</td>
+            <td><span class="score-level level-high">{{m.level}}</span></td>
         </tr>
         <!-- Add more rows for additional subjects -->
     </table>
