@@ -17,6 +17,7 @@ import { UserExampageComponent } from './user-exampage/user-exampage.component';
 import { UpdateUserDetailComponent } from './update-user-detail/update-user-detail.component';
 import { authGuard } from './auth.guard';
 import { UserScoreComponent } from './user-score/user-score.component';
+import { AdminViewquestionComponent } from './admin-viewquestion/admin-viewquestion.component';
 
 
 
@@ -41,7 +42,8 @@ const routes: Routes = [
   {path: "admin-reports", component:AdminStudentReportsComponent},
   {path: "user-update", component:UpdateUserDetailComponent , canActivate:[authGuard]},
   {path:"user-score", component:UserScoreComponent},
-  {path:"user-exampage", component:UserExampageComponent}
+  {path:"user-exampage", component:UserExampageComponent},
+  {path:"admin-viewquestion", component:AdminViewquestionComponent}
 
 
   // {path: "contactus", component: conta}
