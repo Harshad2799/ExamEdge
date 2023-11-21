@@ -21,7 +21,7 @@ export class UserReportComponent {
     let url = `http://localhost:8080/student/detail?emailId=${this.emailId}`
     this.http.get<any>(url).subscribe(data => {
       this.detail = data
-      sessionStorage.setItem("StudentId", data.id)
+      sessionStorage.setItem("StudentId", data.sid)
     })
   }
 

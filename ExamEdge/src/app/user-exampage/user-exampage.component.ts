@@ -18,9 +18,8 @@ export class UserExampageComponent {
   selectedAnswers: { [key: number]: String } = {};
   
   value: any;
-  studentid :string | null = sessionStorage.getItem("StudentId")
-  stuid: number | undefined =this.studentid ? parseInt(this.studentid):undefined
-  result: result = new result(this.stuid);
+  
+  result: result = new result();
    
   
 
@@ -32,10 +31,11 @@ export class UserExampageComponent {
   allquestions() {
     let url = `http://localhost:8080/fetchquestionsbysubid?id=4`;
     this.http.get<any>(url).subscribe((data) => {
-      this.result.id = data[0].subject.id
+      this.result.subject.id = data[0].subject.id
       this.result.level = data[0].level
       console.log(data)
-      console.log(this.stuid)
+      console.log(this.result.level)
+      console.log(this.result.student.sid)
       //save 10 questions to list 
       this.qustionList = this.getRandomQuestions(data, 10);
        
@@ -78,44 +78,36 @@ export class UserExampageComponent {
 
 
 
-  submitexam(){
-    let url =`http://localhost:8080/score/calculator`
-    let url1 =`http://localhost:8080/result`
-    alert("Submit Exam")
-    this.http.post<any>(url, this.qustionList).subscribe(data=> {
-     
-      this.result.marks=data
-      sessionStorage.setItem("marks",data)
-      console.log(this.result.marks)
-    });
-    this.http.post<any>(url1, this.result).subscribe(data => {
-    console.log(this.qustionList)
-    console.log(this.result)
-    });
-
-    this.route.navigate(["/user-scores"])
-
-  //   let url = `http://localhost:8080/score/calculator`;
-  // let url1 = `http://localhost:8080/result`;
-
-  // alert("Submit Exam");
-  // console.log(this.qustionList);
-  // console.log(this.result);
-  // forkJoin([
-  //   this.http.post<any>(url, this.qustionList),
-  //   this.http.post<any>(url1, this.result)
-  // ]).subscribe(([scoreData, resultData]) => {
-  //   this.result.marks = scoreData;
-  //   console.log(this.result.marks);
-
-  //   // Navigate to the next route after both requests are complete
-  //   this.route.navigate(["/user-scores"]);
-  // });
-
+  submitexam() {
+    let url = `http://localhost:8080/score/calculator`;
   
-}
+    alert("Submit Exam");
+    this.http.post<any>(url, this.qustionList).subscribe((data) => {
+      this.result.mark = data;
+      sessionStorage.setItem("marks", data);
+      console.log(this.result.level)
+      // Update subject ID
+      if (this.result.subject.id !== undefined) {
+        this.result.subject.id = this.result.subject.id ;
+      } else {
+        // Handle the case where this.result.id is undefined
+      }  
+      console.log(this.result)
+      //Send the result to the API
+      let url1 = `http://localhost:8080/result`;
+      this.http.post<any>(url1, this.result).subscribe((resultData) => {
+        console.log(resultData);
+  
+        // Navigate to the next route after the requests are complete
+        
+      });
+    });
     
+    this.route.navigate(["/user-scores"]);
   }
+}
+
+
 
 
 
@@ -131,12 +123,17 @@ export class question {
   level!: String;
 }
 
-export class result{
-  constructor(id: number | undefined) {
-    this.id = id;
-  }
-  sid: number = stuid
-  id: number |undefined
-  level!: String
-  marks: number =0
+export class result {
+  level!: String;
+  mark = sessionStorage.getItem("marks");
+  subject: subject = new subject();
+  student: student = new student();
+}
+
+export class subject{
+  id: number | undefined
+}
+
+export class student{
+  sid= sessionStorage.getItem("StudentId")
 }

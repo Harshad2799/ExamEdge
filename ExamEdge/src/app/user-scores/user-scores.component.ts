@@ -8,8 +8,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./user-scores.component.css']
 })
 export class UserScoresComponent {
-  sid: string | null = sessionStorage.getItem("StudentId")
-  id:number | undefined =this.sid ? parseInt(this.sid):undefined 
+  sid = sessionStorage.getItem("StudentId")
+  
   marks: score[]=[]
 
   constructor(private http:HttpClient){}
@@ -18,7 +18,7 @@ export class UserScoresComponent {
   }
 
   checkscore(){
-    let url =`http://localhost:8080/result?id=${this.id}`
+    let url =`http://localhost:8080/student/result?id=${this.sid}`
     this.http.get<any>(url).subscribe(data =>{
       this.marks = data
       console.log(data)
@@ -27,7 +27,12 @@ export class UserScoresComponent {
   }
 }
 export class score{
-  subject!: String
-  score: number |undefined
+  subject: subject = new subject();
+  mark: number |undefined
   level!: String 
+  attempts: number| undefined
 }
+export class subject{
+  name!: String
+}
+

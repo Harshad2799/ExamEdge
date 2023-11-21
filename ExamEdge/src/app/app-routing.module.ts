@@ -38,7 +38,7 @@ const routes: Routes = [
   {path: "admin-deletequestion", component: DeleteQuestionComponent},
   {path: "admin-report", component: AdminreportComponent},
   {path: "admin-reports", component:AdminStudentReportsComponent},
-  {path: "user-update", component:UpdateUserDetailComponent , canActivate:[authGuard]},
+  {path: "user-update", component:UpdateUserDetailComponent },
   {path:"user-score", component:UserScoresComponent},
   {path:"user-exampage", component:UserExampageComponent},
   {path:"user-scores", component:UserScoreComponent}
