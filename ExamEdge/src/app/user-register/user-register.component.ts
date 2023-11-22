@@ -20,9 +20,6 @@ export class UserRegisterComponent {
   msg!: String
   file: File | undefined;
   registration(){
-
-
-    
     let url=`http://localhost:8080/addstudent`;
     this.http.post<any>(url, this.detail).subscribe(data => {
       if(data.status==true){
@@ -35,9 +32,6 @@ export class UserRegisterComponent {
     
   }
 
-  handleFileInput(event: any): void {
-    this.file = event.target.files[0];
-  }
 }
 
 

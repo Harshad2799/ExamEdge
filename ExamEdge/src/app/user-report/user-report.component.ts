@@ -19,9 +19,9 @@ export class UserReportComponent {
 
   getDetail(){
     let url = `http://localhost:8080/student/detail?emailId=${this.emailId}`
-    
     this.http.get<any>(url).subscribe(data => {
       this.detail = data
+      sessionStorage.setItem("StudentId", data.sid)
     })
   }
 
@@ -40,6 +40,8 @@ export class UserReportComponent {
     { name: 'JS', percentage: 82 },
   ];
 
+
+
   LeaderBoard = [
     {name: 'suraj', marks: 35},
     {name: 'sham' ,marks: 50},
@@ -48,9 +50,6 @@ export class UserReportComponent {
   ];
 
   sortedLeaderBoard: any[]; // Create an array for sorted leaderboard
-
-  
-
 }
 
 export class Detail{
