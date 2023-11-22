@@ -18,6 +18,8 @@ export class AdminViewquestionComponent {
   questionList: Question [] = []
   question: Question = new Question();
   sub: subject =new subject();
+  storage: number|undefined
+  
   constructor(private http: HttpClient, private route: Router){}
   
   ngOnInit(){
@@ -38,7 +40,7 @@ export class AdminViewquestionComponent {
     let url = `http://localhost:8080/fetchquestions/subId?id=${this.selectedSubject}`;
     this.http.get<any>(url).subscribe(data => {
        
-       console.log(this.question.questionId)
+      console.log(this.question.questionId)
       console.log(data) 
       this.questionList = data;
       this.question=data;
@@ -46,7 +48,7 @@ export class AdminViewquestionComponent {
     });
   }
    onQuestion(){
-    let url=`localhost:8080/fetchquestions?id`
+    let url=`localhost:8080/fetchquestions?id=`
     this.http.get<any>(url).subscribe(data =>{
       this.question.questionId=data.questionId
       
@@ -57,16 +59,20 @@ export class AdminViewquestionComponent {
     let url=`http://localhost:8080/questionstatus?questionId=${id}`
     this.http.get<any>(url).subscribe(data =>{
     console.log(`question with id ${id}`);
-    
-      
-      
     })
-    
-
   }
 
-  onEdit(){
-    let url=`http://localhost:8080`
+  onEdit(id: number){
+    let url=`http://localhost:8080/fetchquesbyid?questionId=${id}`
+    
+    this.http.get<any>(url).subscribe(data =>{
+      const selectedQuestionId = data[0].questionId;
+      sessionStorage.setItem("QuestionId", selectedQuestionId);
+      console.log(data)
+      // this.question.questionId = 
+      console.log(data.questionId)
+      this.route.navigate(["/admin-editpage"])
+    })
   }
 
 }
@@ -75,6 +81,7 @@ export class subject{
   id: number | undefined
 }
 export class Question{
+
   questionId!: number
   question!: String
   option1!: String
