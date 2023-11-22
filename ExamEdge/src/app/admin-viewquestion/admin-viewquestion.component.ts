@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-viewquestion',
@@ -17,7 +18,7 @@ export class AdminViewquestionComponent {
   questionList: Question [] = []
   question: Question = new Question();
   sub: subject =new subject();
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient, private route: Router){}
   
   ngOnInit(){
     this.subjectdropdown();
@@ -33,26 +34,39 @@ export class AdminViewquestionComponent {
     })
   }
   SubjectSelect() {
+    
     let url = `http://localhost:8080/fetchquestions/subId?id=${this.selectedSubject}`;
     this.http.get<any>(url).subscribe(data => {
-      console.log(data);
-      data.questionid=this.question.qid
-      console.log(this.question.qid) 
+       
+       console.log(this.question.questionId)
+      console.log(data) 
       this.questionList = data;
+      this.question=data;
+
     });
   }
    onQuestion(){
     let url=`localhost:8080/fetchquestions?id`
     this.http.get<any>(url).subscribe(data =>{
+      this.question.questionId=data.questionId
       
     })
   }
 
-  onDelete(){
-    let url=`http://localhost:8080/questionstatus?id=${this.question.qid}`
-    this.http.get(url).subscribe(data =>{
+  onDelete(id: number){
+    let url=`http://localhost:8080/questionstatus?questionId=${id}`
+    this.http.get<any>(url).subscribe(data =>{
+    console.log(`question with id ${id}`);
+    
+      
       
     })
+    
+
+  }
+
+  onEdit(){
+    let url=`http://localhost:8080`
   }
 
 }
@@ -61,7 +75,7 @@ export class subject{
   id: number | undefined
 }
 export class Question{
-  qid: number|undefined
+  questionId!: number
   question!: String
   option1!: String
   option2!: String

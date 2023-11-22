@@ -29,7 +29,7 @@ export class UserExampageComponent {
   }
 
   allquestions() {
-    let url = `http://localhost:8080/fetchquestionsbysubid?id=4`;
+    let url = `http://localhost:8080/fetchquestionsbysubid?id=3`;
     this.http.get<any>(url).subscribe((data) => {
       this.result.subject.id = data[0].subject.id
       this.result.level = data[0].level

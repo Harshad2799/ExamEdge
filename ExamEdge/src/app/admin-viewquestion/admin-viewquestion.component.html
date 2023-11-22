@@ -30,13 +30,14 @@
       <tbody>
         
         <tr *ngFor="let q of questionList">
-          <td >{{ q.question }}</td>
+          <td>{{ q.question }}</td>
           <td>{{ q.option1 }}</td>
           <td>{{ q.option2 }}</td>
           <td>{{ q.option3 }}</td>
           <td>{{ q.option4 }}</td>
           <td>
-            <button type="button" class="btn btn-danger" (click)="onDelete()" >Delete</button>
+            <button type="button" class="btn btn-danger" (click)="onDelete(q.questionId)" >Delete</button>
+            <button type="Edit" class="btn btn-secondary"(click)="onEdit()">Edit</button>
           </td>
         </tr>
       </tbody>

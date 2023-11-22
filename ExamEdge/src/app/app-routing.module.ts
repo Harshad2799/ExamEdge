@@ -17,8 +17,9 @@ import { UserExampageComponent } from './user-exampage/user-exampage.component';
 import { UpdateUserDetailComponent } from './update-user-detail/update-user-detail.component';
 import { authGuard } from './auth.guard';
 
-import { UserScoreComponent } from './user-score/user-score.component';
 import { AdminViewquestionComponent } from './admin-viewquestion/admin-viewquestion.component';
+import { UserScoreComponent } from './user-endscore/user-score.component';
+import { AdminEditpageComponent } from './admin-editpage/admin-editpage.component';
 
 
 
@@ -43,11 +44,12 @@ const routes: Routes = [
   {path: "admin-deletequestion", component: DeleteQuestionComponent},
   {path: "admin-report", component: AdminreportComponent},
   {path: "admin-reports", component:AdminStudentReportsComponent},
-  {path:"admin-viewquestion", component:AdminViewquestionComponent}
+  {path:"admin-viewquestion", component:AdminViewquestionComponent},
   {path: "user-update", component:UpdateUserDetailComponent },
   {path:"user-score", component:UserScoresComponent},
   {path:"user-exampage", component:UserExampageComponent},
-  {path:"user-scores", component:UserScoreComponent}
+  {path:"user-scores", component:UserScoreComponent},
+  {path:"admin-editpage", component:AdminEditpageComponent}
 
 
 
