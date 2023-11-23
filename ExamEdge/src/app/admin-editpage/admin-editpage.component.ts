@@ -32,6 +32,7 @@ export class AdminEditpageComponent {
   //     console.log(data.questionId)
   //   })
   // }
+  
   oneditQuestion(){
     let url=`http://localhost:8080/updatequestion`
     this.http.post(url, this.data).subscribe(data =>{

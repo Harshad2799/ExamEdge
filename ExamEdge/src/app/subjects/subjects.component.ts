@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Question } from '../admin-viewquestion/admin-viewquestion.component';
 
 @Component({
   selector: 'app-subjects',
@@ -9,6 +10,7 @@ import { Component } from '@angular/core';
 export class SubjectsComponent {
   constructor(private http: HttpClient){}
   subjects: Subject[] = [];
+  questions: Question[]=[];
 
 
   showSubjects() {
@@ -16,6 +18,12 @@ export class SubjectsComponent {
     this.http.get<Subject[]>(url).subscribe(data => {
       this.subjects = data;
     });
+  }
+  showQuestion(id:number,level:String){
+    let url=`htpp://localhost:8080/fetchquestions?id=${id}&level=${level}`
+    this.http.get<any>(url).subscribe(data =>{
+      this.questions= data
+    })
   }
 
   ngOnInit(): void {
