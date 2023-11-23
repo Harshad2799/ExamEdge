@@ -20,7 +20,11 @@
     "@angular/router": "^16.2.0",
     "bootstrap": "^5.3.2",
     "chart.js": "^4.4.0",
+<<<<<<< HEAD
     "jquery": "^3.7.1",
+=======
+    "ng2-charts": "^5.0.3",
+>>>>>>> 6207732c0c683e3f07dc9bc63dc25d20146eddf4
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

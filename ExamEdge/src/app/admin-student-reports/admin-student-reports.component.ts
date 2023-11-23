@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import Chart from 'chart.js/auto';
 
@@ -13,22 +14,24 @@ export class AdminStudentReportsComponent {
   selectedStudent: any;
   searchInput!: any;
   msg!: String;
+  
+  constructor(private http:HttpClient){}
 
   students = [
     { id: 1, name: 'Ramesh', subject: 'C', level: 'Level 1', marks: 80, status: 'Pass' },
     { id: 2, name: 'Suresh', subject: 'Java', level: 'Level 2', marks: 65, status: 'Pass' },
     { id: 3, name: 'Jhon', subject: 'python', level: 'Level 3', marks: 70, status: 'Pass' },
-    { id: 4, name: 'Jhon', subject: 'Java', level: 'Level 1', marks: 75, status: 'Pass' },
+    { id: 4, name: 'Jhon', subject: 'Java', level: 'Level 1', marks: 70, status: 'Pass;' },
     { id: 5, name: 'Rutuja', subject: 'HTML', level: 'Level 2', marks: 45, status: 'Fail' },
     { id: 6, name: 'Nandakishiore', subject: 'CSS', level: 'Level 3', marks: 65, status: 'Pass' },
     { id: 7, name: 'Yogesh', subject: 'JS', level: 'Level 1', marks: 90, status: 'Pass' },
-    { id: 8, name: 'Saurabh', subject: 'JS', level: 'Level 2', marks: 85, status: 'Pass' },
+    { id: 8, name: 'Saurabh', subject: 'JS', level: 'Level 2', marks: 45, status: 'Fail' },
     { id: 9, name: 'Saurabh', subject: 'HTML', level: 'Level 3', marks: 75, status: 'Pass' },
     { id: 10, name: 'Rutuja', subject: 'Python', level: 'Level 1', marks: 70, status: 'Pass' },
-    { id: 11, name: 'Yogesh', subject: 'Java', level: 'Level 2', marks: 75, status: 'Pass' },
-    { id: 12, name: 'Swati', subject: 'History', level: 'Level 3', marks: 80, status: 'Pass' },
+    { id: 11, name: 'Yogesh', subject: 'Java', level: 'Level 2', marks: 40, status: 'Fail' },
+    { id: 12, name: 'Swati', subject: 'History', level: 'Level 3', marks: 80, status: 'Pass' }
   ];
-
+    
   filteredStudents: any[] = this.students;
   pieChart: any;
 
@@ -47,7 +50,7 @@ export class AdminStudentReportsComponent {
       this.filteredStudents = this.students.filter(student => student.level === this.selectedLevel);
     }
 
-    this.updatePieChart();
+    this.updatePieChart()
   }
 
   searchStudent() {
@@ -72,6 +75,8 @@ export class AdminStudentReportsComponent {
   }
 
   updatePieChart() {
+      let url=`http://localhost:8080/passFailCount`
+    this.http.get<any>(url)
     if (this.pieChart) {
       this.pieChart.destroy(); // Destroy existing chart instance
     }
@@ -94,4 +99,14 @@ export class AdminStudentReportsComponent {
       },
     });
   }
+
 }
+
+export class student{
+  sid : number|undefined;
+  name! : String;
+  subject!: String;
+  level! : String;
+  marks : number|undefined;
+  status! : String;
+  }
