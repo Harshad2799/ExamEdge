@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class UserReportComponent {
   detail: Detail = new Detail()
+  sid = sessionStorage.getItem("StudentId")
+  marks: score[]=[]
   constructor(private http: HttpClient, private route: Router) {
     this.sortedLeaderBoard = [...this.LeaderBoard]; // Copy the original data
     this.sortedLeaderBoard.sort((a, b) => b.marks - a.marks); // Sort by marks in descending order
@@ -29,6 +31,8 @@ export class UserReportComponent {
 
   ngOnInit() {
     this.getDetail();
+    this.leaderboard();
+    this.checkscore();
   }
 
   skillsData = [
@@ -42,14 +46,27 @@ export class UserReportComponent {
 
 
 
-  LeaderBoard = [
-    {name: 'suraj', marks: 35},
-    {name: 'sham' ,marks: 50},
-    {name: 'nadakumar', marks: 65},
-    {name: 'Rajesh', marks: 65}
-  ];
+  LeaderBoard: leaderboard[] = [];
 
   sortedLeaderBoard: any[]; // Create an array for sorted leaderboard
+
+  leaderboard(){
+    let url=`http://localhost:8080/leaderboard`
+    this.http.get<any>(url).subscribe(data =>{
+      console.log(data)
+      this.LeaderBoard=data
+    })
+
+  }
+
+  checkscore(){
+    let url =`http://localhost:8080/student/result?sid=${this.sid}`
+    this.http.get<any>(url).subscribe(data =>{
+      this.marks = data
+      
+    })
+  }
+
 }
 
 export class Detail{
@@ -58,3 +75,20 @@ export class Detail{
   phoneNo: number=0
   imageData!:String
 }
+
+export class leaderboard{
+  name!: String
+  mark: number | undefined
+}
+
+export class score{
+  attempts!: number
+  level!: String
+  subjectId: number | undefined
+  subjectName!: String 
+}
+export class subject{
+  name!: String
+}
+
+

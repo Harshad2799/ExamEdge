@@ -1,0 +1,9 @@
+package com.abm.examedge.dto;
+
+public class ReportDto {
+	private Long attempts;
+	private String level;
+	private Long subjectId;
+	private String subjectName;
+
+}

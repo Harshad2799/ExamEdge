@@ -29,6 +29,14 @@
     text-align: center;
   }
   
+  #pieChart{
+    display: block;
+    box-sizing: border-box;
+    height: 323px;
+    width: 774px;
+}
+
+  
   th {
     background-color: #333;
     color: white;
