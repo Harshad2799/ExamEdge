@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   templateUrl: './add-question.component.html',
   styleUrls: ['./add-question.component.css']
 })
+
+
 export class AddQuestionComponent {
   detail: questioDetails = new questioDetails()
   constructor(private http: HttpClient) { }

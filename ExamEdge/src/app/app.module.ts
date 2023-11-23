@@ -16,7 +16,7 @@ import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.compone
 import { AddQuestionComponent } from './add-question/add-question.component';
 import { DeleteQuestionComponent } from './delete-question/delete-question.component';
 import { AdminreportComponent } from './admin-report/adminreport.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { AdminStudentReportsComponent } from './admin-student-reports/admin-student-reports.component';
 import { AddsubjectComponent } from './addsubject/addsubject.component';
 import { UpdateUserDetailComponent } from './update-user-detail/update-user-detail.component';
