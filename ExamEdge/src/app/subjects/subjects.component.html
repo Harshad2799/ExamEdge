@@ -10,7 +10,7 @@
         <img [src]="subject.logo" class="sublogo">
         <ul>
           <ng-container>
-            <a routerLink="/user-instruction" class="examlinks">
+            <a routerLink="/user-instruction" class="examlinks" [(ngModel)]="questions">
               <li>Basic </li>
             </a>
             <a routerLink="/user-instruction" class="examlinks">

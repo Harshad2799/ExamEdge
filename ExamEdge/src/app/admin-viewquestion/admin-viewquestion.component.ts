@@ -63,11 +63,11 @@ export class AdminViewquestionComponent {
   }
 
   onEdit(id: number){
-    let url=`http://localhost:8080/fetchquesbyid?questionId=${id}`
+    let url=`http://localhost:8080/single/questionbyid?id=${id}`
     
     this.http.get<any>(url).subscribe(data =>{
-      const selectedQuestionId = data[0].questionId;
-      sessionStorage.setItem("QuestionId", selectedQuestionId);
+      //const selectedQuestionId = data.questionId;
+      sessionStorage.setItem("Question", JSON.stringify(data));
       console.log(data)
       // this.question.questionId = 
       console.log(data.questionId)

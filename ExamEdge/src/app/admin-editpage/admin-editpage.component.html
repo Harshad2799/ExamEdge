@@ -1,60 +1,61 @@
 
 <div class="card shadow p-3">
-    <form (ngSubmit)="addquestion()">
+    <form >
 
       <div class="form-group">
-        <label for="question id">Question Id</label>
-        <input type="text" class="form-control" id="question" name="uquestion" [(ngModel)]="questiondata.questionId"
+        <label for="questionId">Question Id</label>
+        <input type="text" class="form-control" id="questionId" name="uquestionId" [(ngModel)]="data.questionId"
           #uquestion="ngModel">
       </div>
+      
 
       <div class="form-group">
         <label for="question">Question</label>
-        <input type="text" class="form-control" id="question" name="uquestion" [(ngModel)]="questiondata.question"
+        <input type="text" class="form-control" id="question" name="uquestion" [(ngModel)]="data.question"
           #uquestion="ngModel">
       </div>
     
       <div class="form-group">
         <label for="option1">Option 1</label>
-        <input type="text" class="form-control" id="option1" name="uoption1" [(ngModel)]="questiondata.option1"
+        <input type="text" class="form-control" id="option1" name="uoption1" [(ngModel)]="data.option1"
           #uoption1="ngModel">
       </div>
   
       <div class="form-group">
         <label for="option2">Option 2</label>
-        <input type="text" class="form-control" id="option2" name="uoption2" [(ngModel)]="questiondata"
+        <input type="text" class="form-control" id="option2" name="uoption2" [(ngModel)]="data.option2"
           #uoption2="ngModel">
       </div>
   
       <div class="form-group">
         <label for="option3">Option 3</label>
-        <input type="text" class="form-control" id="option3" name="uoption3" [(ngModel)]="questiondata.option3"
+        <input type="text" class="form-control" id="option3" name="uoption3" [(ngModel)]="data.option3"
           #uoption3="ngModel">
       </div>
   
       <div class="form-group">
         <label for="option4">Option 4</label>
-        <input type="text" class="form-control" id="option4" name="uoption4" [(ngModel)]="questiondata.option4"
+        <input type="text" class="form-control" id="option4" name="uoption4" [(ngModel)]="data.option4"
           #uoption4="ngModel">
       </div>
   
       <div class="form-group">
         <label for="correctAnswer">Correct Answer</label>
-        <input type="text" class="form-control" id="correctAnswer" name="uanswer" [(ngModel)]="questiondata.answer"
+        <input type="text" class="form-control" id="correctAnswer" name="uanswer" [(ngModel)]="data.answer"
           #uanswer="ngModel">
       </div>
   
       <div class="form-group">
-        <label for="correctAnswer">Level</label>
+        <label for="level">Level</label>
         <!-- <input type="text" class="form-control" id="correctAnswer" name="uanswer" [(ngModel)]="detail.level"
           #uanswer="ngModel"> -->
-          <select class="form-control" id="correctAnswer" name="uanswer" [(ngModel)]="questiondata.level" >
+          <select class="form-control" id="level" name="ulevel" [(ngModel)]="data.level" >
             <option >Basic</option>
             <option >Medium</option>
             <option >Advance</option>
           </select>
       </div>
   
-      <button class="btn btn-primary btn-md" type="submit" id="addQuestion"  >Add Question</button>
+      <button class="btn btn-primary btn-md" type="submit" id="addQuestion" (click)="oneditQuestion()" >Add Question</button>
   
     </form>
