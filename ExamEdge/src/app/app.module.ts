@@ -24,6 +24,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { UserExampageComponent } from './user-exampage/user-exampage.component';
 import { UserScoresComponent } from './user-scores/user-scores.component';
+import { AdminViewquestionComponent } from './admin-viewquestion/admin-viewquestion.component';
+import { AdminEditpageComponent } from './admin-editpage/admin-editpage.component';
 
 
 @NgModule({
@@ -48,7 +50,9 @@ import { UserScoresComponent } from './user-scores/user-scores.component';
     AddsubjectComponent,
     UpdateUserDetailComponent,
     
-    UserExampageComponent
+    UserExampageComponent,
+          AdminViewquestionComponent,
+          AdminEditpageComponent
   ],
   imports: [
     BrowserModule,

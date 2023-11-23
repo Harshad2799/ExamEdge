@@ -8,26 +8,39 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class UpdateUserDetailComponent {
   update: Update = new Update();
+  data!: any
   show(){
     console.log(this.update);
   }
 
   constructor(private http: HttpClient) { }
 
-  updaterecord(){
+  // ngOnInit(){
+  //   this.getrecord()
+  // }
+
+  getrecord(){
     
-    let url = `http://localhost:8080/updaterecord/${this.update.id}`;
+    let url = `http://localhost:8080/student/update?=${this.update.sid}`;
     console.log(this.update)
     this.http.post(url, this.update, { responseType: 'text'}).subscribe(data => {
+      console.log(data)
+      this.data = data
   }
-)}
+
+  )
+}
+updaterecord(){
+
+}
+
 }
 
 
 
 
 export class Update{
-  id: number=0
+  sid=sessionStorage.getItem("StudentId")
   name!: String
   emailId!: String
   password!: String

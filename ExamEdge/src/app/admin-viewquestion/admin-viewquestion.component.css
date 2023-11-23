@@ -1,0 +1,17 @@
+.card {
+    margin: auto;
+    background-color: whitesmoke;
+    height: 85vh;
+    width: 85%;
+    margin-top: 26px;
+    font-family: 'Roboto Condensed', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    }
+
+    
+    form{
+    margin-top: 20px;
+    margin-left: 55px;
+    margin-right: 55px;
+    }

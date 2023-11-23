@@ -1,9 +1,10 @@
+<body>
 <div class="container">
     <div class="card">
         <form (ngSubmit)="updaterecord()">
             <div class="form-group">
                 <label for="studentId">Student ID:</label>
-                <input type="text" class="form-control" id="studentId" [(ngModel)]="update.id" name="uid" >
+                <input type="text" class="form-control" id="studentId" [(ngModel)]="update.sid" name="uid" >
             </div>
             <div class="form-group">
                 <label for="name">Name:</label>
@@ -38,3 +39,4 @@
         </form>
     </div>
 </div>
+</body>

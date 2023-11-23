@@ -24,7 +24,9 @@ export class UserLoginComponent {
       }
       else if(this.data.status== true){
         let c = this.route.navigate(["/user-report"])
+        console.log(data)
         sessionStorage.setItem("EmailId", data.emailId);
+        sessionStorage.setItem("StudentId", data.sid)
         }else{
           this.detail.msg = data.messageIfAny;
           this.route.navigate(["/login"])
