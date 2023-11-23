@@ -24,16 +24,15 @@ export class AddQuestionComponent {
     })
   }
   addquestion() {
-    console.log(this.detail)
+    
     let url = `http://localhost:8080/addquestion`;
     alert(this.id)
     this.detail.subject.id = this.id;
     this.http.post<any>(url, this.detail).subscribe(data => {
-      console.log('Adding question for Subject ID:', this.id);
-      console.log(this.detail)
+      
     })
 
-    console.log(this.id)
+    
 
   }
 

@@ -1,0 +1,46 @@
+
+<div class="card shadow">
+    <form (ngSubmit)="onQuestion()">
+      <div class="form-group">
+        <label for="subjectSelect">Select Subject</label>
+        <div class="input-group" style="width: 250px;">
+          <select class="custom-select form-control" id="subjectSelect" [(ngModel)]="selectedSubject"
+            name="selectedSubject">
+            <option>-------</option>
+            <option *ngFor="let subject of subjectlist" [value]="subject.id">{{subject.name}}</option>
+          </select>
+          <div class="input-group-append">
+            <button type="button" class="btn btn-secondary" (click)="SubjectSelect()"
+              style="margin-left: 55px;">Go</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <table class="table table-bordered mt-3">
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Option 1</th>
+          <th>Option 2</th>
+          <th>Option 3</th>
+          <th>Option 4</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr *ngFor="let q of questionList">
+          <td>{{ q.question }}</td>
+          <td>{{ q.option1 }}</td>
+          <td>{{ q.option2 }}</td>
+          <td>{{ q.option3 }}</td>
+          <td>{{ q.option4 }}</td>
+          <td>
+            <button type="button" class="btn btn-danger" (click)="onDelete(q.questionId)" >Delete</button>
+            <button type="Edit" class="btn btn-secondary"(click)="onEdit(q.questionId)">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+  </div>
