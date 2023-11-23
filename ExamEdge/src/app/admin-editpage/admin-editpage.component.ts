@@ -10,29 +10,32 @@ export class AdminEditpageComponent {
   detail: questioDetails = new questioDetails()
   constructor(private http: HttpClient) { }
   data: any
-  id = sessionStorage.getItem("questionId")
+  //id = sessionStorage.getItem("questionId")
   subjectlist: Subject[] = [];
   questiondata: questioDetails[]=[];
   
   ngOnInit(){
-    this.onEdit();
-  }
-  
-  addquestion() {
     // let url=`http://localhost:8080/fetchquesbyid/QuestionId=${this.id}`
     console.log(this.data)
-    this.data =sessionStorage.getItem("QuestionId")
+    this.data =JSON.parse(sessionStorage.getItem("Question") ?? '{}');
+
   }
 
-  onEdit(){
-    let url=`http://localhost:8080/fetchquesbyid?questionId=${this.id}` 
-    this.http.get<any>(url).subscribe(data =>{
-      this.questiondata=data
-      console.log(this.questiondata)
-      const selectedQuestionId = data[0].questionId;
-      console.log(data)
-      // this.question.questionId = 
-      console.log(data.questionId)
+  // onEdit(){
+  //   let url=`http://localhost:8080/fetchquesbyid?questionId=${this.id}` 
+  //   this.http.get<any>(url).subscribe(data =>{
+  //     this.questiondata=data
+  //     console.log(this.questiondata)
+  //     const selectedQuestionId = data[0].questionId;
+  //     console.log(data)
+  //     // this.question.questionId = 
+  //     console.log(data.questionId)
+  //   })
+  // }
+  oneditQuestion(){
+    let url=`http://localhost:8080/updatequestion`
+    this.http.post(url, this.data).subscribe(data =>{
+
     })
   }
 }
