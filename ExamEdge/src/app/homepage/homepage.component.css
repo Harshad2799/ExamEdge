@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  background-color: black;
 }
 
 .card {
@@ -57,9 +57,58 @@ body {
   line-height: 1.5;
   position: absolute;
   translate: 0px 108px;
-  color: white;
+  color:black;
 }
 
 div {
   padding: 20px;
 }
+
+.new-card {
+  background-color: #fff; /* Set background color for the new card */
+  margin-top: 20px; /* Adjust the margin as needed */
+  display: flex;
+}
+
+.new-card .image {
+  flex: 1;
+}
+
+.new-card .image img {
+  width: 7%;
+  height: auto;
+  display: block;
+  margin: left
+  ;
+}
+
+.new-card .content {
+  flex: 1;
+  padding: 20px;
+  position: relative; /* Position relative for absolute positioning of content */
+}
+
+/* Add styles for the new card's content */
+.new-card h2 {
+  font-size: 1.5em;
+  color: #333; /* Set text color for the new card */
+  position: absolute; /* Position absolute to place it over the image */
+  top: 50%; /* Center vertically */
+  transform: trans
+  lateY(-50%); /* Adjust for centering */
+}
+.container{
+  display:flex;
+ 
+}
+.col2 img{
+  width: 50%;
+  height: auto;
+ 
+
+}
+
+.col1 {
+  margin-left:  -100px;
+}
+
