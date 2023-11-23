@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-editpage',
@@ -8,34 +9,45 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AdminEditpageComponent {
   detail: questioDetails = new questioDetails()
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private route: Router){ }
   data: any
-  id = sessionStorage.getItem("questionId")
+  //id = sessionStorage.getItem("questionId")
   subjectlist: Subject[] = [];
   questiondata: questioDetails[]=[];
   
   ngOnInit(){
-    this.onEdit();
-  }
-  
-  addquestion() {
     // let url=`http://localhost:8080/fetchquesbyid/QuestionId=${this.id}`
     console.log(this.data)
-    this.data =sessionStorage.getItem("QuestionId")
+    this.data =JSON.parse(sessionStorage.getItem("Question") ?? '{}');
+
   }
 
-  onEdit(){
-    let url=`http://localhost:8080/fetchquesbyid?questionId=${this.id}` 
-    this.http.get<any>(url).subscribe(data =>{
-      this.questiondata=data
-      console.log(this.questiondata)
-      const selectedQuestionId = data[0].questionId;
-      console.log(data)
-      // this.question.questionId = 
-      console.log(data.questionId)
-    })
+  // onEdit(){
+  //   let url=`http://localhost:8080/fetchquesbyid?questionId=${this.id}` 
+  //   this.http.get<any>(url).subscribe(data =>{
+  //     this.questiondata=data
+  //     console.log(this.questiondata)
+  //     const selectedQuestionId = data[0].questionId;
+  //     console.log(data)
+  //     // this.question.questionId = 
+  //     console.log(data.questionId)
+  //   })
+  // }
+
+  oneditQuestion(){
+    let url=`http://localhost:8080/updatequestion`
+    this.http.post(url, this.data,{ responseType: 'text'}).subscribe(
+      (response) => {
+      alert("Updated successfully!");
+      this.route.navigate(["/admin-report"]);
+    }
+      
+     
+      
+
+    )}
   }
-}
+
 export class questioDetails {
   question!: String
   option1!: String
