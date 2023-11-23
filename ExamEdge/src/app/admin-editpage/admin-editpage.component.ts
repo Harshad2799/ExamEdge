@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-editpage',
@@ -8,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AdminEditpageComponent {
   detail: questioDetails = new questioDetails()
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private route: Router){ }
   data: any
   //id = sessionStorage.getItem("questionId")
   subjectlist: Subject[] = [];
@@ -32,14 +33,21 @@ export class AdminEditpageComponent {
   //     console.log(data.questionId)
   //   })
   // }
-  
+
   oneditQuestion(){
     let url=`http://localhost:8080/updatequestion`
-    this.http.post(url, this.data).subscribe(data =>{
+    this.http.post(url, this.data,{ responseType: 'text'}).subscribe(
+      (response) => {
+      alert("Updated successfully!");
+      this.route.navigate(["/admin-report"]);
+    }
+      
+     
+      
 
-    })
+    )}
   }
-}
+
 export class questioDetails {
   question!: String
   option1!: String

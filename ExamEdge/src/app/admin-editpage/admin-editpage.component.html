@@ -1,13 +1,13 @@
 
 <div class="card shadow p-3">
-    <form >
+    <form (ngSubmit)="oneditQuestion()" >
 
       <div class="form-group">
         <label for="questionId">Question Id</label>
         <input type="text" class="form-control" id="questionId" name="uquestionId" [(ngModel)]="data.questionId"
           #uquestion="ngModel">
       </div>
-      
+
 
       <div class="form-group">
         <label for="question">Question</label>
@@ -56,6 +56,6 @@
           </select>
       </div>
   
-      <button class="btn btn-primary btn-md" type="submit" id="addQuestion" (click)="oneditQuestion()" >Add Question</button>
+      <button class="btn btn-primary btn-md" type="submit" id="addQuestion"  >Update</button>
   
     </form>
